@@ -1,0 +1,71 @@
+@import 'vars';
+/* Переменные */
+@import 'fonts';
+/* Шрифты */
+@import 'libs';
+/*библиотеки*/
+@import 'reset';
+/* Сброс */
+@import 'global';
+/* Глобальные стили */
+
+.new,
+.hit,
+.stock {
+    padding-bottom: 80px;
+}
+
+.top {
+    padding-bottom: 160px;
+}
+
+.top__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+}
+
+.top__img-him:hover {
+    background: linear-gradient(0deg, rgba(22, 56, 181, 0.1), rgba(22, 56, 181, 0.1));
+    background-blend-mode: color, normal;
+}
+
+.top__img-her:hover {
+    background: linear-gradient(0deg, rgba(225, 49, 254, 0.1), rgba(225, 49, 254, 0.1));
+}
+
+
+.stock__slider {}
+
+.stock__slider-item,
+.stock__slider-content {
+    margin-right: 24px;
+}
+
+.stock__slider-top {
+    width: 616px;
+    height: 360px;
+    background: #000000;
+    opacity: 0.1;
+    margin-bottom: 16px;
+}
+
+.stock__slider-link,
+.stock__slider-data {
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+}
+
+.stock__slider-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stock__slider-title {
+    cursor: pointer;
+}
+
+/* МЕДИА-ЗАПРОСЫ */
+@import 'media';

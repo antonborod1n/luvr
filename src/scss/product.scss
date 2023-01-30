@@ -1,0 +1,79 @@
+@import 'vars';
+/* Переменные */
+@import 'fonts';
+/* Шрифты */
+@import 'libs';
+/*библиотеки*/
+@import 'reset';
+/* Сброс */
+@import 'global';
+/* Глобальные стили */
+
+.product {}
+
+.product__content {}
+
+.product__item {
+    max-width: 360px;
+    margin-right: 24px;
+}
+
+.product__item-box {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.product__item-img {
+    height: 360px;
+    object-fit: cover;
+}
+
+.product__item-row {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+}
+
+.product__new,
+.product__sale {
+    @extend %montserrat-700;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    padding: 8px;
+    width: 54px;
+    height: 40px;
+    background: #FF6666;
+    color: #FFFFFF;
+}
+
+.product__info {}
+
+.product__title-link {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+    color: #000000;
+}
+
+.product__price-new {
+    @extend %montserrat-500;
+    display: inline-block;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.product__price-old {
+    @extend %montserrat-500;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 0.5;
+    margin-left: 8px;
+}
