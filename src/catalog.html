@@ -11,5 +11,8 @@
 
 <body>
     <%= require('html-loader!./templates/header.html').default %>
-
+        <main class="main">
+            <%= require('html-loader!./templates/page-catalog.html').default %>
+        </main>
+        <%= require('html-loader!./templates/footer.html').default %>
 </body>

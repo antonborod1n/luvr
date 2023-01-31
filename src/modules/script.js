@@ -39,7 +39,7 @@ $(function () {
         ],
     });
 
-    $('.product__content').slick({
+    $('.app-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         variableWidth: true,
@@ -132,9 +132,9 @@ serchLink.addEventListener('click', function () {
 window.addEventListener('scroll', function () {
     if (window.scrollY > 1) {
         menu.classList.add('menu--hidden')
-    } else if (window.scrollY >= 100) {
+    } else if (window.scrollY < 10) {
         console.log(window.scrollY)
-        headerInner.classList.remove('menu--hidden');
+        menu.classList.remove('menu--hidden');
     }
 });
 
