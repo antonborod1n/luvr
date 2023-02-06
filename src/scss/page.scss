@@ -91,12 +91,13 @@
 
 
     &:checked+.form__input-checkbox-sqr {
-        background-color: #7a7a7a;
+        background-color: #000000;
     }
 }
 
 .form__input-checkbox-text {
     margin-left: 24px;
+    cursor: pointer;
 }
 
 .form__input-checkbox-sqr {
@@ -104,7 +105,6 @@
     margin: 8px 0 0 8px;
     width: 8px;
     height: 8px;
-    background: #000000;
     cursor: pointer;
 }
 
@@ -149,4 +149,220 @@
     }
 }
 
-//end login page----------------------
+//end login, registration page----------------------
+
+//ACCOUNT
+
+.account {
+    padding: 200px 0;
+}
+
+.account__top {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.account__img {
+    width: 104px;
+    height: 104px;
+}
+
+.account__top-box {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.account__title {
+    @extend %montserrat-700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.account__change-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.account__inner {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+}
+
+.account__user-info {
+    max-width: 744px;
+    margin-top: 40px;
+}
+
+.form__account {
+    padding-top: 32px;
+}
+
+.form__account-box-email {
+    width: 300px;
+    height: 64px;
+}
+
+.form__input-radio-text {
+    margin: 0 12px;
+    cursor: pointer;
+}
+
+.form__input-radio-sqr {
+    margin: 8px 0 0 0;
+}
+
+.form__account-box-phone {
+    width: 173px;
+    height: 64px;
+}
+
+.form__account-box {
+    display: flex;
+    column-gap: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.form__account-subtitle {
+    display: block;
+}
+
+.form__box-gender {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 185px;
+    height: 56px;
+}
+
+.form__account-gender {
+    display: flex;
+}
+
+.form__account-title {
+    margin-bottom: 24px;
+}
+
+.form__address {
+    display: flex;
+    column-gap: 24px;
+    margin-bottom: 24px;
+}
+
+.form__address:last-child {
+    margin-bottom: 0px;
+}
+
+.form__box-address {
+    width: 100%;
+}
+
+.account__notifications {
+    max-width: 744px;
+}
+
+.account__notifications-title {
+    text-align: right;
+    margin-bottom: 16px;
+}
+
+.account__notifications-item {
+    padding: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.account__notifications-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.account__notifications-subtitle {
+    @extend %montserrat-500;
+    font-size: 24px;
+    line-height: 32px;
+    color: $text;
+}
+
+.account__notifications-time {
+    @extend %montserrat-500;
+}
+
+//end account----------------------
+
+//CONTACT
+
+.contact {
+    padding: 200px 0;
+}
+
+.contact__inner {
+    max-width: 1256px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.contact__item {
+    margin-bottom: 40px;
+}
+
+.contact__box {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 512px;
+    padding-top: 8px;
+}
+
+.contact__phone {
+    @extend %montserrat-500;
+    margin-bottom: 8px;
+}
+
+.contact__address {
+    font-style: normal;
+}
+
+
+//end contact----------------------
+
+//FAQ
+
+.faq {
+    padding: 200px 0;
+}
+
+.faq__subtitle {
+    max-width: 440px;
+}
+
+.faq__inner {
+    max-width: 1256px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.faq__item {
+    margin-bottom: 40px;
+}
+
+.faq__box {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 512px;
+    padding-top: 8px;
+}
+
+.faq__connection {
+    max-width: 744px;
+}
+
+//end faq----------------------

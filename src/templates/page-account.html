@@ -1,13 +1,109 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-    <h1>ACOOUNT</h1>
-</div>
+<section class="account">
+    <div class="container">
+        <div class="account__top">
+            <img class="account__img" src="../images/content/user-img.webp" alt="User img">
+            <div class="account__top-box">
+                <h1 class="account__title">Попов Егор</h1>
+                <button class="account__change-btn">
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.12201 11.6059L0.414675 15.1412L3.95044 14.4344L12.4357 5.94908L9.6066 3.11996L1.12201 11.6059Z"
+                            fill="black" />
+                        <rect x="10.3137" y="2.41211" width="2" height="4" transform="rotate(-45 10.3137 2.41211)"
+                            fill="black" />
+                    </svg>
+
+                </button>
+            </div>
+        </div>
+        <div class="account__inner">
+            <div class="account__user-info">
+                <form class="form__account" action="#">
+                    <div class="form__account-box">
+                        <div class="form__box-email form__account-box-email">
+                            <label class="form__label" for="email">Email</label>
+                            <input class="form__input" id="email" type="email" placeholder="не указано">
+                        </div>
+
+                        <div class="form__box-phone form__account-box-phone">
+                            <label class="form__label" for="phone">Телефон</label>
+                            <input class="form__input" type="text" id="phone" placeholder="+7 (900) 000-00-00">
+                        </div>
+
+                        <div class="form__box-gender">
+                            <label class="form__label">Пол</label>
+                            <div class="form__account-gender">
+                                <label class="form__gender">
+                                    <input class="form__input-checkbox form__input-radio" id="check" type="radio"
+                                        name="gender-btn" checked>
+                                    <span class="form__input-checkbox-sqr form__input-radio-sqr"></span>
+                                    <span class="form__input-checkbox-text form__input-radio-text">Мужской</span>
+                                </label>
+                                <label class="form__gender">
+                                    <input class="form__input-checkbox form__input-radio" id="check" type="radio"
+                                        name="gender-btn">
+                                    <span class="form__input-checkbox-sqr form__input-radio-sqr"></span>
+                                    <span class="form__input-checkbox-text form__input-radio-text">Женский</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 class="subtitle form__account-title">адрес</h2>
+                    <div class="form__address">
+                        <div class="form__box-address form__box-country">
+                            <label class="form__label" for="country">Страна</label>
+                            <input class="form__input" id="text" type="country" placeholder="не указано">
+                        </div>
+                        <div class="form__box-address form__box-city">
+                            <label class="form__label" for="city">Город</label>
+                            <input class="form__input" type="text" id="city" placeholder="указано">
+
+                        </div>
+                    </div>
+                    <div class="form__address">
+                        <div class="form__box-address form__box-street">
+                            <label class="form__label" for="street">Улица</label>
+                            <input class="form__input" type="text" id="street" placeholder="указано">
+                        </div>
+                        <div class="form__box-address form__box-house">
+                            <label class="form__label" for="house">Дом</label>
+                            <input class="form__input" type="text" id="house" placeholder="указано">
+                        </div>
+                        <div class="form__box-address form__box-room">
+                            <label class="form__label" for="room">Квартира</label>
+                            <input class="form__input" type="text" id="room" placeholder="указано">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="account__notifications">
+                <h2 class="subtitle account__notifications-title">уведомления</h2>
+                <div class="account__notifications-item">
+                    <div class="account__notifications-box">
+                        <h3 class="account__notifications-subtitle">Заголовок акции или чегото такого</h3>
+                        <time class="account__notifications-time">20.01.2023</time>
+                    </div>
+                    <p class="account__notifications-text">
+                        По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у
+                        некторых людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст
+                        рыба на русском языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит
+                        советских времен.
+                    </p>
+                </div>
+
+                <div class="account__notifications-item">
+                    <div class="account__notifications-box">
+                        <h3 class="account__notifications-subtitle subtitle">Заголовок акции или чегото другого</h3>
+                        <time class="account__notifications-time">25.02.2023</time>
+                    </div>
+                    <p class="account__notifications-text">
+                        По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у
+                        некторых людей недоумение при попытках прочитать рыбу текст.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

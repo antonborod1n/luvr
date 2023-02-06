@@ -1,11 +1,21 @@
-@media (max-width: 1200px) {}
+@media (max-width: 1512px) {}
 
-@media (max-width: 992px) {}
+@media (max-width: 1366px) {}
 
-@media (max-width: 768px) {}
+@media (max-width: 1032px) {
+    .contact__box {
+        padding-left: 352px;
+    }
+}
 
-@media (max-width: 568px) {}
+@media (max-width: 640px) {
+    .contact__box {
+        padding-left: 0px;
+    }
+}
 
-@media (max-width: 450px) {}
+@media (max-width: 504px) {}
 
-@media (max-width: 350px) {}
+@media (max-width: 360px) {}
+
+@media (max-width: 296px) {}

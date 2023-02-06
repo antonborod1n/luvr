@@ -36,9 +36,15 @@ body {
     font-size: 48px;
     line-height: 72px;
     letter-spacing: 0.05em;
-    color: #000000;
 }
 
+.subtitle {
+    @extend %montserrat-500;
+    color: $text;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+}
 
 @keyframes height-open {
     0% {
