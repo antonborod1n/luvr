@@ -1,13 +1,25 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="container">
-    <h1>REGISTARTION2</h1>
-</div>
+<section class="registration">
+    <div class="container">
+        <h1 class="title registration__title">регистрация</h1>
+        <form class="form__page form__registration" action="#">
+            <div class="form__box-container form__box-phone form__box-registration-phone">
+                <label for="phone" class="form__label">Телефон</label>
+                <input type="text" class="form__input" id="phone" placeholder="+7 (900) 000-00-00" required>
+            </div>
+            <div class="form__box-container form__box-registration-sms">
+                <label for="sms" class="form__label">Код из смс</label>
+                <input type="text" class="form__input" id="sms" placeholder="Введите код" required>
+            </div>
+            <div class="form__box">
+                <label for="check">
+                    <input class="form__input-checkbox" id="check" type="checkbox">
+                    <span class="form__input-checkbox-sqr"></span>
+                    <span class="form__input-checkbox-text">Согласен с условиями</span>
+                </label>
+                <a class="form__link-policy" href="#">Политики
+                    конфиденциальности</a>
+            </div>
+            <button class="form__btn form__btn-submit" type="submit">Войти</button>
+        </form>
+    </div>
+</section>
