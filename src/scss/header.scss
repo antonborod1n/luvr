@@ -41,6 +41,7 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: opacity .3s;
     z-index: 100;
+    background-color: #FFFFFF;
 
     &:hover {
         .menu {
@@ -54,7 +55,6 @@
 
 .header__inner {
     padding: 8px 0;
-    background-color: transparent;
 }
 
 .header__top {

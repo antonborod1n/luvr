@@ -7,3 +7,16 @@
     background-color: #F9FBF9;
     margin-bottom: 40px;
 }
+
+.catalog__product {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 24px;
+    grid-row-gap: 40px;
+}
+
+
+.catalog__product-item {
+    margin-right: 0;
+}

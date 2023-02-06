@@ -2,6 +2,7 @@ import $ from "jquery";
 import "slick-carousel";
 
 $(function () {
+
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -116,8 +117,26 @@ $(function () {
             }
         ],
     });
-});
 
+    $('.goods-content__slide-thumb').slick({
+        asNavFor: '.goods-content__slide-big',
+        focusOnSelect: true,
+        arrows: false,
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        vertical: true,
+        draggable: false,
+    });
+
+    $('.goods-content__slide-big').slick({
+        asNavFor: '.goods-content__slide-thumb',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+    });
+});
 
 //search
 const serchLink = document.querySelector('.searh-link');
@@ -135,6 +154,43 @@ window.addEventListener('scroll', function () {
     } else if (window.scrollY < 10) {
         console.log(window.scrollY)
         menu.classList.remove('menu--hidden');
+    }
+});
+
+//tabs
+const tabsBtn = document.querySelectorAll('.goods__tabs-control-btn');
+const tabsContent = document.querySelectorAll('.goods__tabs-content-block');
+const tabsControl = document.querySelector('.goods__tabs-control');
+const active = 'goods__tabs-control-btn--active';
+
+function hideTabContent() {
+    tabsContent.forEach(item => {
+        item.style.display = 'none';
+    });
+
+    tabsBtn.forEach(item => {
+        item.classList.remove(active);
+    });
+}
+
+function showTabsContent(i = 0) {
+    tabsContent[i].style.display = 'block';
+    tabsBtn[i].classList.add(active);
+}
+
+hideTabContent();
+showTabsContent();
+
+tabsControl.addEventListener('click', (event) => {
+    const target = event.target;
+
+    if (target && target.classList.contains('goods__tabs-control-btn')) {
+        tabsBtn.forEach((item, i) => {
+            if (target == item) {
+                hideTabContent();
+                showTabsContent(i);
+            }
+        });
     }
 });
 
