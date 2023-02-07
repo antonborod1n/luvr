@@ -46,6 +46,10 @@ body {
     letter-spacing: 0.04em;
 }
 
+.title-hidden {
+    display: none;
+}
+
 @keyframes height-open {
     0% {
         opacity: 0;

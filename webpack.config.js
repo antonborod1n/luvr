@@ -18,6 +18,8 @@ module.exports = {
     index_contact: path.resolve(__dirname, './src/index_contact.js'),
     index_faq: path.resolve(__dirname, './src/index_faq.js'),
     index_shopping: path.resolve(__dirname, './src/index_shopping.js'),
+    index_delivery: path.resolve(__dirname, './src/index_delivery.js'),
+    index_cart: path.resolve(__dirname, './src/index_cart.js'),
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -89,6 +91,11 @@ module.exports = {
       template: path.resolve(__dirname, './src/shopping.html'),
       filename: 'shopping.html',
       chunks: ['index_shopping']
+    }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, './src/delivery.html'),
+      filename: 'delivery.html',
+      chunks: ['index_delivery']
     }),
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),

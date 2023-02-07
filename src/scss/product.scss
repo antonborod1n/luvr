@@ -11,8 +11,19 @@
 
 .product {}
 
+.product__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 24px;
+    grid-row-gap: 40px;
+}
+
 .product__item {
     max-width: 360px;
+}
+
+.product__item-slider {
     margin-right: 24px;
 }
 
@@ -51,6 +62,10 @@
 }
 
 .product__info {}
+
+.product__title {
+    margin-bottom: 8px;
+}
 
 .product__title-link {
     font-size: 24px;
