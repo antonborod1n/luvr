@@ -2,7 +2,6 @@ import $ from "jquery";
 import "slick-carousel";
 
 $(function () {
-
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -138,6 +137,7 @@ $(function () {
     });
 });
 
+
 //search
 const serchLink = document.querySelector('.searh-link');
 const serchPopup = document.querySelector('.serch-popup');
@@ -158,7 +158,7 @@ window.addEventListener('scroll', function () {
 });
 
 //tabs
-const tabsBtn = document.querySelectorAll('.goods__tabs-control-btn');
+/* const tabsBtn = document.querySelectorAll('.goods__tabs-control-btn');
 const tabsContent = document.querySelectorAll('.goods__tabs-content-block');
 const tabsControl = document.querySelector('.goods__tabs-control');
 const active = 'goods__tabs-control-btn--active';
@@ -192,5 +192,19 @@ tabsControl.addEventListener('click', (event) => {
             }
         });
     }
+}); */
+
+let shoppingMoreBtn = document.querySelector('.shopping__link-more');
+let shoppinDrop = document.querySelector('.shopping__drop-box');
+
+
+shoppingMoreBtn.addEventListener('click', function () {
+    shoppinDrop.classList.toggle('active');
 });
 
+let shoppinAddBtn = document.querySelector('.shopping__btn-info');
+let shoppinPopup = document.querySelector('.shopping__popup');
+
+shoppinAddBtn.addEventListener('click', function () {
+    shoppinPopup.classList.toggle('active');
+});

@@ -561,31 +561,154 @@
 
 //SHOPPING
 
+.shopping__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.shopping__active {
+    margin-bottom: 40px;
+}
+
+.shopping__title {
+    margin-bottom: 24px;
+}
+
 .shopping__item {
+    width: 744px;
     display: flex;
     justify-content: space-between;
 }
 
 .shopping__link {}
 
-.shopping__img {}
+.shopping__img {
+    min-width: 104px;
+    height: 104px;
+}
 
 .shopping__box {
     display: flex;
+    column-gap: 24px;
 }
 
-.shopping__process {}
+.shopping__process {
+    @extend %montserrat-500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+}
 
-.shopping__num {}
+.shopping__num {
+    opacity: 0.5;
+    margin-bottom: 24px;
+}
 
-.shopping__title {}
+.shopping__drop-box {
+    display: none;
 
-.shopping__title-link {}
+    &.active {
+        display: block;
+    }
+}
 
-.shopping__link-more {}
+.shopping__row-box {
+    max-width: 360px;
+}
 
-.shopping__btn-info {}
+.shopping__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    position: relative;
+}
 
-.shopping__item-price {}
+.shopping__title-link,
+.shopping__drop-link {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    transition: all .3s;
 
-.shopping__data {}
+    &:hover {
+        transition: all .3s;
+        color: rgba(0, 0, 0, 0.5)
+    }
+}
+
+.shopping__drop-box-item {
+    margin-bottom: 8px;
+}
+
+.shopping__link-more {
+    color: #000000;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all .3s;
+
+    &:hover {
+        transition: all .3s;
+        opacity: 1;
+    }
+}
+
+.shopping__btn-info {
+    align-self: flex-end;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover svg path {
+        transition: all .3s;
+        fill: rgba(0, 0, 0, 0.5)
+    }
+}
+
+.shopping__item-price {
+    @extend %montserrat-500;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: right;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.shopping__popup {
+    display: none;
+}
+
+.shopping__popup.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 8px;
+    top: 25px;
+    right: 13px;
+    padding: 16px 25px;
+    position: absolute;
+    width: 232px;
+    height: 120px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.shopping__popup-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+        transition: all .3s;
+        opacity: 0.5;
+    }
+}
