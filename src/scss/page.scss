@@ -89,9 +89,17 @@
     clip: rect(0 0 0 0);
     position: absolute;
 
-
     &:checked+.form__input-checkbox-sqr {
         background-color: #000000;
+    }
+
+    &:checked+.form__filter-checkbox-sqr {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:checked+.form__filter-text {
+        color: rgba(0, 0, 0, 0.5);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     }
 }
 
@@ -100,12 +108,37 @@
     cursor: pointer;
 }
 
+.form__filter-text {
+    margin: 16px 24px 16px 0;
+    cursor: pointer;
+    transition: border-bottom .3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+
+    &:hover {
+        transition: border-bottom .3s;
+        border-bottom: 1px solid rgba(0, 0, 0, 1);
+    }
+}
+
 .form__input-checkbox-sqr {
     position: absolute;
     margin: 8px 0 0 8px;
     width: 8px;
     height: 8px;
     cursor: pointer;
+}
+
+.form__filter-checkbox-sqr {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.form__filter-checkbox-text {
+    transition: color .3s;
+}
+
+.form__filter-checkbox-text:hover {
+    transition: color .3s;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .form__link-policy {
@@ -428,6 +461,7 @@
     font-size: 24px;
     line-height: 32px;
     color: #000000;
+    cursor: pointer;
 }
 
 .product-min__item-price {

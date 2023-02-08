@@ -1,11 +1,38 @@
+@import 'vars';
+/* Переменные */
+@import 'fonts';
+/* Шрифты */
+@import 'libs';
+/*библиотеки*/
+@import 'reset';
+/* Сброс */
+@import 'global';
+/* Глобальные стили */
+
 .catalog {
     padding-bottom: 88px;
+}
+
+.catalog-content {
+    position: relative;
 }
 
 .catalog__top {
     padding-top: 424px;
     background-color: #F9FBF9;
     margin-bottom: 40px;
+}
+
+.catalog__top-inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 744px;
+}
+
+.catalog__top-title {
+    flex-grow: 1;
 }
 
 .catalog__product {
@@ -16,7 +43,204 @@
     grid-row-gap: 40px;
 }
 
-
 .catalog__product-item {
     margin-right: 0;
+}
+
+.catalog__filter-control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 24px;
+}
+
+.catalog__filter-btn {
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    padding: 6px 0;
+    height: 40px;
+    transition: border-bottom .3s;
+
+    &:hover {
+        transition: border-bottom .3s;
+        border-bottom: 2px solid #000000;
+    }
+
+    &:focus {
+        transition: border-bottom .3s;
+        border-bottom: 2px solid #000000;
+    }
+}
+
+.catalog__filter-btn-popular {
+    margin-right: 8px;
+    transition: all .3s;
+
+    &::after {
+        content: url(../images/icons/arrow-change.svg);
+        position: absolute;
+        top: 8px;
+        right: -13px;
+    }
+
+    &:hover::after {
+        transition: all .3s;
+        top: 4px;
+        transform: rotate(180deg)
+    }
+
+    &:focus {
+        transition: all .3s;
+        color: rgba(0, 0, 0, 0.5);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+.catalog__filter-btn-price {
+    transition: all .3s;
+
+    &::after {
+        content: url(../images/icons/arrow-change.svg);
+        position: absolute;
+        top: 8px;
+        right: -13px;
+    }
+
+    &:hover::after {
+        transition: all .3s;
+        top: 4px;
+        transform: rotate(180deg)
+    }
+
+    &:focus {
+        transition: all .3s;
+        color: rgba(0, 0, 0, 0.5);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+    }
+}
+
+.catalog__filter-gender {
+    display: flex;
+    column-gap: 24px;
+}
+
+.catalog__filter-btn-him {
+    color: #1638B5;
+
+    &:hover {
+        transition: border-bottom .3s;
+        border-bottom: 2px solid #1638B5;
+    }
+
+    &:focus {
+        transition: border-bottom .3s;
+        border-bottom: 2px solid #1638B5;
+    }
+}
+
+.catalog__filter-btn-her {
+    color: #E131FE;
+
+    &:hover {
+        transition: border-bottom .3s;
+        border-bottom: 2px solid #E131FE;
+    }
+
+    &:focus {
+        transition: border-bottom .3s;
+        border-bottom: 2px solid #E131FE;
+    }
+}
+
+.catalog__filter-sort {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.form__filter {
+    width: 345px;
+    margin-left: auto;
+}
+
+.filter__btn-box {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filter__inner {
+    position: absolute;
+    top: 104px;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-500%);
+    width: 567px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: block;
+    z-index: 3;
+    opacity: 0;
+    background-color: #fff;
+    transition: opacity .3s;
+    padding-right: 24px;
+}
+
+.filter__inner.active {
+    overflow: visible;
+    opacity: 1;
+    transition: opacity .3s;
+    transform: translateY(0%);
+}
+
+.form__filter-label-price {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+
+}
+
+.form__filter-subtitle {
+    display: block;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 16px;
+}
+
+.form__filter-row {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form__filter-row:last-child {
+    border-bottom: none;
+}
+
+.form__filter-price {
+    @extend %montserrat-500;
+    width: 100%;
+    padding: 0px 8px 8px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #7a7a7a;
+    opacity: 1;
+
+    &::placeholder {
+        @extend %montserrat-500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        opacity: 0.5;
+    }
+
+    &:focus {
+        border-bottom: 1px solid #000000;
+    }
 }

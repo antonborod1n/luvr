@@ -194,17 +194,15 @@ tabsControl.addEventListener('click', (event) => {
     }
 }); */
 
-let shoppingMoreBtn = document.querySelector('.shopping__link-more');
-let shoppinDrop = document.querySelector('.shopping__drop-box');
+
+//filter
+const filter = document.querySelector('.filter__inner');
+const filterOpen = document.querySelector('.catalog__filter-btn');
 
 
-shoppingMoreBtn.addEventListener('click', function () {
-    shoppinDrop.classList.toggle('active');
-});
+console.log(filter)
+console.log(filterOpen)
 
-let shoppinAddBtn = document.querySelector('.shopping__btn-info');
-let shoppinPopup = document.querySelector('.shopping__popup');
-
-shoppinAddBtn.addEventListener('click', function () {
-    shoppinPopup.classList.toggle('active');
-});
+filterOpen.addEventListener('click', function () {
+    filter.classList.toggle('active');
+})
