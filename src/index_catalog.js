@@ -6,5 +6,6 @@ import "./scss/slider.scss";
 import "./scss/product.scss";
 import "./scss/catalog.scss";
 import "./modules/script";
+import "./modules/catalog";
 
 

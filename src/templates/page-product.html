@@ -47,20 +47,42 @@
                 </div>
 
                 <div class="goods-content__desc">
-                    <h1 class="title">BYREDO bal d'afrique</h1>
+                    <h1 class="goods__title title">BYREDO bal d'afrique</h1>
                     <span class="goods__vendor">артикул: 26730600002</span>
                     <form class="goods__form" action="#">
-                        <span class="goods__filter">Объем</span>
-                        <input type="radio">
-                        <input type="radio">
+                        <div class="goods__form-row">
+                            <div class="goods__form-subtitle">Объем</div>
+                            <label class="goods__form-label" for="check-new">
+                                <input class="form__input-checkbox" id="check-new" type="radio" name="check">
+                                <span class="form__input-checkbox-text form__goods-checkbox-text">50</span>
+                            </label>
+
+                            <label class="goods__form-label" for="check-sale">
+                                <input class="form__input-checkbox" id="check-sale" type="radio" name="check">
+                                <span class="form__input-checkbox-text form__goods-checkbox-text">100</span>
+                            </label>
+                        </div>
 
                         <div class="goods__price">
-                            <div class="product__price-new">108 128 <span>₸</span></div>
-                            <del class="product__price-old">108 128 <span>₸</span></del>
+                            <div class="goods__price-new">108 128 <span>₸</span></div>
+                            <del class="goods__price-old">108 128 <span>₸</span></del>
                         </div>
 
                         <div class="goods__btns">
-                            <button class="goods__btn-submit" type="submit">Добавить в корзину</button>
+                            <button class="goods__btn-submit" type="submit">
+                                <span>Добавить в корзину</span>
+                                <svg width="20" height="26" viewBox="0 0 20 26" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.963379 7.64258H19.0362V24.6255H0.963379V7.64258Z" stroke="white" />
+                                    <mask id="path-2-inside-1_583_976" fill="white">
+                                        <path
+                                            d="M14.6224 9.59402V5.57292C14.6224 4.32696 14.1343 3.13202 13.2657 2.25099C12.397 1.36996 11.2189 0.875 9.99038 0.875C8.76187 0.875 7.58371 1.36996 6.71508 2.25099C5.84641 3.13202 5.3584 4.32696 5.3584 5.57292V9.59402" />
+                                    </mask>
+                                    <path
+                                        d="M13.2657 2.25099L12.5536 2.95307L12.5536 2.95307L13.2657 2.25099ZM6.71508 2.25099L7.42716 2.95309L7.42718 2.95307L6.71508 2.25099ZM15.6224 9.59402V5.57292H13.6224V9.59402H15.6224ZM15.6224 5.57292C15.6224 4.06625 15.0323 2.61851 13.9778 1.54891L12.5536 2.95307C13.2363 3.64552 13.6224 4.58766 13.6224 5.57292H15.6224ZM13.9778 1.54891C12.9227 0.478795 11.4887 -0.125 9.99038 -0.125V1.875C10.9491 1.875 11.8714 2.26112 12.5536 2.95307L13.9778 1.54891ZM9.99038 -0.125C8.49206 -0.125 7.05803 0.478795 6.00298 1.54891L7.42718 2.95307C8.10939 2.26112 9.03167 1.875 9.99038 1.875V-0.125ZM6.00299 1.5489C4.94839 2.61851 4.3584 4.06627 4.3584 5.57292H6.3584C6.3584 4.58765 6.74444 3.64552 7.42716 2.95309L6.00299 1.5489ZM4.3584 5.57292V9.59402H6.3584V5.57292H4.3584Z"
+                                        fill="white" mask="url(#path-2-inside-1_583_976)" />
+                                </svg>
+                            </button>
                             <button class="goods__btn-like">
                                 <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +97,7 @@
             </div>
 
             <div class="goods__info">
-                <h2 class="goods__title title">информация</h2>
+                <h2 class="goods__subtitle title">информация</h2>
                 <div class="goods__tabs">
                     <div class="goods__tabs-control">
                         <button class="goods__tabs-control-btn goods__tabs-control-btn--active">описание</button>
@@ -84,7 +106,7 @@
                     <div class="goods__tabs-content">
                         <div class="goods__tabs-content-desc anim__opas goods__tabs-content-block goods__tabs--active">
                             <h3 class="goods__tabs-title">BYREDO bal d'afrique</h3>
-                            <span class="goods__vendor">артикул: 26730600002</span>
+                            <div class="goods__tabs-vendor">артикул: 26730600002</div>
                             <p class="goods__tabs-text">Ревущие двадцатые годы… В знаменитом Мулен Руж жарче, чем в
                                 самой
                                 Африке, ведь на сцене Жозефина Бейкер! Черная жемчужина, танцующая богиня, ставшая
@@ -100,19 +122,25 @@
                                 марроканский кедр.
                             </p>
                             <h3 class="goods__tabs-subtitle">Подробные характеристики</h3>
-                            <dl>
-                                <dt>группа аромата</dt>
-                                <dd>акватические</dd>
-                                <dt>для кого</dt>
-                                <dd>унисекс</dd>
-                                <dt>страна бренда</dt>
-                                <dd>Швеция</dd>
-                            </dl>
+                            <ul class="goods__tabs-list">
+                                <li class="goods__tabs-item">
+                                    <p class="goods__tabs-items">группа аромата</p>
+                                    <p>акватические</p>
+                                </li>
+                                <li class="goods__tabs-item">
+                                    <p class="goods__tabs-items">для кого</p>
+                                    <p>унисекс</p>
+                                </li>
+                                <li class="goods__tabs-item">
+                                    <p class="goods__tabs-items">страна бренда</p>
+                                    <p>Швеция</p>
+                                </li>
+                            </ul>
                         </div>
 
                         <div class="goods__tabs-content-rev anim__opas goods__tabs-content-block">
                             <h3 class="goods__tabs-title">BYREDO</h3>
-                            <span>Швеция</span>
+                            <div class="goods__tabs-country">Швеция</div>
                             <p class="goods__tabs-text">
                                 Бренд Byredo основан в 2006 году стокгольмским парфюмером Беном Горхэмом в
                                 сотрудничестве с

@@ -14,6 +14,10 @@ body {
     color: $text;
 }
 
+body.hidden-scrolling {
+    overflow-y: hidden;
+}
+
 .container {
     max-width: 1542px;
     padding: 0 15px;
@@ -24,6 +28,26 @@ body {
     max-width: 1814px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 68px;
+    }
+
+    .container-header {
+        padding: 0 68px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 0 32px;
+    }
+
+    .container-header {
+        padding: 0 32px;
+    }
 }
 
 .main {
