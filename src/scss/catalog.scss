@@ -29,6 +29,7 @@
     justify-content: flex-end;
     margin-left: auto;
     width: 744px;
+    padding-bottom: 32px;
 }
 
 .catalog__top-title {
@@ -51,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 0 24px;
+    padding-bottom: 24px;
 }
 
 .catalog__filter-btn {
@@ -66,6 +67,7 @@
     height: 40px;
     transition: border-bottom .3s;
 
+
     &:hover {
         transition: border-bottom .3s;
         border-bottom: 2px solid #000000;
@@ -74,6 +76,21 @@
     &:focus {
         transition: border-bottom .3s;
         border-bottom: 2px solid #000000;
+    }
+}
+
+.catalog__filter-btn-reset {
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0;
+    transition: transform .3s, opacity .3s;
+    transform: translateX(0%);
+
+    &.active {
+        overflow: visible;
+        opacity: 1;
+        transition: transform .3s, opacity .3s;
+        transform: translateX(0%);
     }
 }
 
@@ -164,7 +181,9 @@
 }
 
 .form__filter {
-    width: 345px;
+    width: 360px;
+    background-color: #ffffff;
+    padding-right: 24px;
     margin-left: auto;
 }
 
@@ -173,24 +192,52 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /*  border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.form__filter-sort {
+    display: none;
+}
+
+.form__filter-sort {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.form__filter-sort-title {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 0.5;
+}
+
+.form__filter-sort-popular {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-right: 24px;
+}
+
+.form__filter-sort-price {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
 }
 
 .filter__inner {
     position: absolute;
-    top: 104px;
-    bottom: 0;
+    top: 55px;
     left: 0;
-    transform: translateY(-500%);
-    width: 567px;
+    bottom: 0;
+    width: 555px;
+    transform: translateX(-500%);
     overflow-y: auto;
     overflow-x: hidden;
     display: block;
-    z-index: 3;
+    z-index: 999;
     opacity: 0;
-    background-color: #fff;
-    transition: opacity .3s;
-    padding-right: 24px;
+    background-color: #ffffff;
+    transition: transform .3s, opacity .3s;
 }
 
 .filter__inner.active {
@@ -211,6 +258,7 @@
     display: block;
     color: rgba(0, 0, 0, 0.5);
     margin-bottom: 16px;
+    padding-left: 20px;
 }
 
 .form__filter-row {
@@ -244,3 +292,6 @@
         border-bottom: 1px solid #000000;
     }
 }
+
+/* МЕДИА-ЗАПРОСЫ */
+@import 'media';

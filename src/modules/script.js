@@ -20,10 +20,10 @@ $(function () {
         nextArrow: '<button type="button" class="slick-next"><img src="images/slider/arrow-right.svg" alt="arrow"></button>',
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1512,
                 settings: {
                     arrows: false,
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 500
                 }
@@ -32,7 +32,7 @@ $(function () {
                 breakpoint: 992,
                 settings: {
                     arrows: false,
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 500
                 }
@@ -62,7 +62,7 @@ $(function () {
                 breakpoint: 1200,
                 settings: {
                     arrows: false,
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 500
                 }
@@ -71,7 +71,7 @@ $(function () {
                 breakpoint: 992,
                 settings: {
                     arrows: false,
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1,
                     speed: 500
                 }
@@ -111,8 +111,8 @@ $(function () {
 document.addEventListener('DOMContentLoaded', function () {
     //search
     const mediaSize = 640;
-    const serchLink = document.querySelector('.searh-link');
-    const serchPopup = document.querySelector('.serch-popup');
+    const serchLink = document.querySelector('.search-link');
+    const serchPopup = document.querySelector('.search-popup');
     const menu = document.querySelector('.menu');
 
     serchLink.addEventListener('click', function () {
@@ -128,12 +128,22 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
     //header
+    let headerBottom = document.querySelector('.header__bottom');
+    let header = document.querySelector('.header');
+
+    /* header.addEventListener('mouseover', function () {
+        menu.classList.toggle('menu--hidden');
+        headerBottom.classList.toggle('header__bottom--hidden');
+    }); */
+
     window.addEventListener('scroll', function () {
         if (window.scrollY > 1) {
-            menu.classList.add('menu--hidden')
+            menu.classList.add('menu--hidden');
+            headerBottom.classList.add('header__bottom--hidden');
         } else if (window.scrollY < 10 || window.innerWidth <= mediaSize) {
             console.log(window.scrollY)
             menu.classList.remove('menu--hidden');
+            headerBottom.classList.remove('header__bottom--hidden');
         }
     });
 
@@ -150,4 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuOverlay.classList.toggle("active");
         document.body.classList.toggle("hidden-scrolling");
     }
-})
+
+
+});
+

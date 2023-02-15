@@ -30,9 +30,38 @@ body.hidden-scrolling {
     margin: 0 auto;
 }
 
+@media (max-width: 1366px) {
+    .container {
+        max-width: 1062px;
+        padding: 0 15px;
+    }
+
+    .container-header {
+        padding: 0 68px;
+    }
+
+    .account__user-info {
+        max-width: 504px;
+    }
+
+    .account__notifications {
+        max-width: 504px;
+    }
+
+    .form__account-box {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .form__account-box-email {
+        width: 100%;
+    }
+}
+
 @media (max-width: 640px) {
     .container {
-        padding: 0 68px;
+        max-width: 534px;
+        padding: 0 15px;
     }
 
     .container-header {
@@ -180,7 +209,3 @@ body.hidden-scrolling {
     color: rgba($color: #000000, $alpha: 0.5);
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
 }
-
-.pagination__arrows-next {}
-
-.pagination__arrows-prew {}

@@ -21,6 +21,7 @@
 
 .product__item {
     max-width: 360px;
+    margin-right: 24px;
 }
 
 .product__item-slider {
@@ -33,7 +34,7 @@
 }
 
 .product__item-img {
-    height: 360px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -90,3 +91,6 @@
     opacity: 0.5;
     margin-left: 8px;
 }
+
+/* МЕДИА-ЗАПРОСЫ */
+@import 'media';

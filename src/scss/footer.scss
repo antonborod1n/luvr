@@ -12,61 +12,66 @@
 .footer {
     padding: 24px 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
 
-.footer__inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 24px
-}
+    &__inner {
+        display: flex;
 
-.footer__menu {
-    width: 360px;
-}
+        align-items: center;
+    }
 
-.footer__item {
-    margin-bottom: 24px;
-}
+    &__column {
+        display: flex;
+        width: 100%;
+    }
 
-.footer__item:last-child {
-    margin-bottom: 0px;
-}
+    &__menu {
+        width: 360px;
+    }
 
-.footer__link {
-    @extend %montserrat-500;
-    color: $text;
-    transition: all .5s;
-    padding-bottom: 8px;
-}
+    &__item {
+        margin-bottom: 24px;
 
-.footer__link:hover {
-    transition: all .5s;
-    border-bottom: 1px solid #000000;
-}
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
 
-.footer__link-contact {
-    @extend %montserrat-500;
-    color: $text;
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-    transition: all .3s;
-}
+    &__logo {
+        display: block;
+        margin-left: auto;
 
-.footer__link-contact:hover {
-    transition: color .3s;
-    color: #7a7a7a;
-}
+    }
 
-.footer__link-contact:hover svg path {
-    transition: fill .3s;
-    fill: #7a7a7a;
-}
+    &__link {
+        @extend %montserrat-500;
+        color: $text;
+        transition: all .5s;
+        padding-bottom: 8px;
 
-.footer__logo {
-    margin-left: auto;
+        &:hover {
+            transition: all .5s;
+            border-bottom: 1px solid #000000;
+        }
+
+        &-contact {
+            @extend %montserrat-500;
+            color: $text;
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            transition: all .3s;
+
+            &:hover {
+                transition: color .3s;
+                color: #7a7a7a;
+            }
+
+            &:hover svg path {
+                transition: fill .3s;
+                fill: #7a7a7a;
+            }
+        }
+    }
 }
 
 /* МЕДИА-ЗАПРОСЫ */

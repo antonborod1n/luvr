@@ -9,6 +9,19 @@
 @import 'global';
 /* Глобальные стили */
 
+@import 'swiper/css';
+
+
+.recom,
+.viewed {
+    margin-bottom: 80px;
+}
+
+.viewed__title,
+.recom__title {
+    margin-bottom: 24px;
+}
+
 .new,
 .hit,
 .stock {
@@ -26,16 +39,66 @@
 }
 
 .top__img-him:hover {
+    transition: all .3s;
+    box-shadow: 0px 0px 24px rgba(55, 63, 255, 0.6);
     background: linear-gradient(0deg, rgba(22, 56, 181, 0.1), rgba(22, 56, 181, 0.1));
     background-blend-mode: color, normal;
 }
 
 .top__img-her:hover {
+    transition: all .3s;
     background: linear-gradient(0deg, rgba(225, 49, 254, 0.1), rgba(225, 49, 254, 0.1));
+    box-shadow: 0px 0px 24px rgba(225, 49, 254, 0.6);
 }
 
+.top__subtitle {
+    @extend %montserrat-500;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    display: none;
+}
 
-.stock__slider {}
+.top__subtitle-him {
+    color: #1638B5;
+}
+
+.top__subtitle-her {
+    color: #E131FE;
+}
+
+.slider-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider-btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 18px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    cursor: pointer;
+    width: 54px;
+    height: 32px;
+    transition: fill .3s;
+}
+
+.swiper-button-prev:hover svg path,
+.swiper-button-next:hover svg path {
+    transition: fill .3s;
+    fill: #7a7a7a;
+}
+
+.stock__slider-item {
+    max-width: 616px;
+}
 
 .stock__slider-item,
 .stock__slider-content {
@@ -80,10 +143,6 @@
 .registration__title {
     margin-bottom: 40px;
 }
-
-.form__page {}
-
-.form__login {}
 
 .form__box-container {
     margin-bottom: 24px;
@@ -262,7 +321,7 @@
 //ACCOUNT
 
 .account {
-    padding: 200px 0;
+    padding: 136px 0 80px;
 }
 
 .account__top {
@@ -279,7 +338,7 @@
 .account__top-box {
     display: flex;
     align-items: center;
-    column-gap: 8px;
+    column-gap: 2px;
 }
 
 .account__title {
@@ -379,14 +438,31 @@
 }
 
 .account__notifications-title {
+    @extend %montserrat-500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #000000;
     text-align: right;
     margin-bottom: 16px;
+}
+
+.form__account-title {
+    @extend %montserrat-500;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #000000;
 }
 
 .account__notifications-item {
     padding: 32px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 24px;
+}
+
+.account__notifications-item:last-child {
+    margin-bottom: 0px;
 }
 
 .account__notifications-box {
