@@ -113,6 +113,15 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    let favorLinks = document.querySelectorAll('.favor-link');
+
+    /* color hearts */
+    favorLinks.forEach(item => {
+        item.addEventListener('click', function () {
+            item.classList.toggle('active');
+        })
+    })
+
     //search
     const mediaSize = 640;
     const serchLink = document.querySelector('.search-link');

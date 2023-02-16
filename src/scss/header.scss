@@ -227,9 +227,14 @@
         stroke: #FF6666;
     }
 
-    &:focus svg path {
+    /*  &:focus svg path {
         fill: #faadad;
         stroke: #faadad;
+    } */
+
+    &.active svg path {
+        fill: #FF6666;
+        stroke: #FF6666;
     }
 }
 
