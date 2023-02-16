@@ -30,6 +30,15 @@ body.hidden-scrolling {
     margin: 0 auto;
 }
 
+.swiper {
+    max-width: 100%;
+}
+
+.swiper-hit {
+    max-width: 1512px;
+    margin: 0 auto;
+}
+
 @media (max-width: 1366px) {
     .container {
         max-width: 1062px;
@@ -96,7 +105,6 @@ body.hidden-scrolling {
     color: $text;
     font-size: 32px;
     line-height: 48px;
-    letter-spacing: 0.04em;
 }
 
 .title-hidden {
@@ -119,7 +127,7 @@ body.hidden-scrolling {
 
 //SLICK-SLIDER
 
-.slick-dots {
+/* .slick-dots {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,7 +171,9 @@ body.hidden-scrolling {
 
 .slick-next {
     right: 0;
-}
+} */
+
+/* PAGINATION */
 
 .pagination {
     display: flex;
@@ -208,4 +218,58 @@ body.hidden-scrolling {
 .pagination__link--active {
     color: rgba($color: #000000, $alpha: 0.5);
     border-bottom: 1px solid rgba($color: #000000, $alpha: 0.5);
+}
+
+/* SWIPPER */
+
+.slider-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.slider-btn-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 18px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    cursor: pointer;
+    width: 100%;
+    height: 32px;
+    transition: fill .3s;
+}
+
+.swiper-button-prev:hover svg path,
+.swiper-button-next:hover svg path {
+    transition: fill .3s;
+    fill: #7a7a7a;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-pagination-bullet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    position: relative;
+    top: -44px;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #000000;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    transition: all .3s ease 0s;
 }

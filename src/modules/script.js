@@ -1,114 +1,118 @@
-import $ from "jquery";
-import "slick-carousel";
-
-$(function () {
-    $('.slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 500,
-        arrows: false,
-        dots: true,
-    });
-
-    $('.app-slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        variableWidth: true,
-        speed: 500,
-        arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="images/slider/arrow-left.svg" alt="arrow"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/slider/arrow-right.svg" alt="arrow"></button>',
-        responsive: [
-            {
-                breakpoint: 1512,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    speed: 500
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    speed: 500
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    speed: 500
-                }
-            }
-        ],
-    });
-
-    $('.stock__slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        variableWidth: true,
-        speed: 500,
-        arrows: true,
-        prevArrow: '<button type="button" class="slick-prev"><img src="images/slider/arrow-left.svg" alt="arrow"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="images/slider/arrow-right.svg" alt="arrow"></button>',
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    speed: 500
-                }
-            },
-            {
-                breakpoint: 992,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    speed: 500
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    speed: 500
-                }
-            }
-        ],
-    });
-
-    $('.goods-content__slide-thumb').slick({
-        asNavFor: '.goods-content__slide-big',
-        focusOnSelect: true,
-        arrows: false,
-        dots: false,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        vertical: true,
-        draggable: false,
-    });
-
-    $('.goods-content__slide-big').slick({
-        asNavFor: '.goods-content__slide-thumb',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: false,
-    });
-});
+import Swiper from 'swiper/bundle';
+import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.swiper-stock', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 24
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 2.5,
+                spaceBetween: 24
+            },
+        }
+    });
+
+    const hitProduct = new Swiper('.swiper-hit', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 24
+            },
+
+            940: {
+                slidesPerView: 4,
+                spaceBetween: 24
+            }
+        }
+    });
+
+    /*     const newProduct = new Swiper('.swiper-new', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+    
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                940: {
+                    slidesPerView: 4,
+                    spaceBetween: 24
+                }
+            }
+        }); */
+
+    const slider = document.querySelector('.slider-main');
+    const sliderNav = document.querySelector('.slider-nav');
+
+    let mySwiperNav = new Swiper(sliderNav, {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        loopedSlides: 5,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+        /* breakpoints: {
+            295: {
+                direction: 'horizontal',
+            },
+            640: {
+                direction: 'vertical',
+            },
+        } */
+    })
+
+    let mySwiper = new Swiper(slider, {
+        spaceBetween: 10,
+        loopedSlides: 5,
+        thumbs: {
+            swiper: mySwiperNav,
+        }
+    })
+
+    const sliderMains = new Swiper('.main-slider', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+        },
+        autoplay: {
+            delay: 3000,
+        },
+    });
+
     //search
     const mediaSize = 640;
     const serchLink = document.querySelector('.search-link');

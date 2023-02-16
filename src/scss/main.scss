@@ -11,21 +11,86 @@
 
 @import 'swiper/css';
 
+/* SLIDER-MAIN */
+
+.slider {
+    padding-bottom: 80px;
+
+    &__item {
+        min-height: 720px;
+
+        &-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-first {
+            background: #C4F5BC;
+        }
+
+        &-second {
+            background: #F5ECBC;
+        }
+
+        &-third {
+            background: #FACAC0;
+        }
+
+        &-fourth {
+            background: #C0C3FA;
+        }
+
+        &-fifth {
+            background: #B5EBEB;
+        }
+    }
+
+    &__content {
+        margin-top: 256px;
+        width: 744px;
+    }
+
+    &__title {
+        @extend %montserrat-700;
+        font-size: 48px;
+        line-height: 72px;
+        letter-spacing: 0.03em;
+        max-width: 600px;
+        margin-bottom: 8px;
+    }
+
+    &__descr {
+        max-width: 300px;
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        @extend %btn;
+        width: 220px;
+        height: 56px;
+    }
+}
 
 .recom,
 .viewed {
     margin-bottom: 80px;
 }
 
-.viewed__title,
-.recom__title {
-    margin-bottom: 24px;
-}
-
 .new,
 .hit,
 .stock {
     padding-bottom: 80px;
+}
+
+.title__new,
+.title__stock,
+.title__hit {
+    @extend %montserrat-500;
+    color: $text;
+    font-size: 48px;
+    line-height: 72px;
+    letter-spacing: 0.05em;
 }
 
 .top {
@@ -69,55 +134,20 @@
     color: #E131FE;
 }
 
-.slider-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.slider-btn-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 18px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    cursor: pointer;
-    width: 54px;
-    height: 32px;
-    transition: fill .3s;
-}
-
-.swiper-button-prev:hover svg path,
-.swiper-button-next:hover svg path {
-    transition: fill .3s;
-    fill: #7a7a7a;
-}
-
 .stock__slider-item {
     max-width: 616px;
 }
 
-.stock__slider-item,
-.stock__slider-content {
+.stock__slider-item {
     margin-right: 24px;
 }
 
 .stock__slider-top {
-    width: 616px;
+    max-width: 616px;
     height: 360px;
     background: #000000;
     opacity: 0.1;
     margin-bottom: 16px;
-}
-
-.stock__slider-link,
-.stock__slider-data {
-    font-size: 24px;
-    line-height: 32px;
-    color: #000000;
 }
 
 .stock__slider-content {
@@ -129,6 +159,15 @@
 .stock__slider-title {
     cursor: pointer;
 }
+
+.stock__slider-link,
+.stock__slider-data {
+    @extend %montserrat-400;
+    font-size: 24px;
+    line-height: 32px;
+    color: #000000;
+}
+
 
 //LOGIN, REGISTRATION1, REGISTRATION2, REGISTRATION3
 
