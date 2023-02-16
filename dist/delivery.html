@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+
+<script defer src="vendor-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_getUr-503ab9.bundle.js"></script><script defer src="index_delivery.bundle.js"></script></head>
+
+<body>
+    <header class="header">
+    <div class="container-header">
+        <div class="header__inner">
+            <div class="header__top">
+                <button class="burger">
+                    <svg width="24" height="17" viewBox="0 0 24 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="0.5" x2="24" y2="0.5" stroke="black" />
+                        <line y1="8.5" x2="24" y2="8.5" stroke="black" />
+                        <line y1="16.5" x2="24" y2="16.5" stroke="black" />
+                    </svg>
+                </button>
+                <a class="logo" href="#">
+                    <img class="logo-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMTEwIDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNODguNjE1IDExLjU2NDdDODguNjE1IDguODUyMzggODguNjE1IDYuMTQwMDIgODguNjE1IDMuNDI3NjZDODguNjE1IDEuOTk2OTcgODguMjg3MSAxLjU3OTY4IDg2Ljg1NjQgMS41MjAwN0M4Ni41Mjg2IDEuNDkwMjYgODYuMjMwNSAxLjUyMDA3IDg1LjkwMjYgMS41NDk4OEM4NS40NTU1IDEuNTc5NjggODUuMjc2NyAxLjM3MTA0IDg1LjI0NjkgMC45NTM3NTRDODUuMTg3MyAwLjA1OTU3MDcgODUuMjQ2OSAwLjAyOTc2NDUgODYuMTcwOSAwLjA1OTU3MDZDODkuOTU2MyAwLjA4OTM3NjcgOTMuNzcxNCAwLjA4OTM3NjcgOTcuNTU2OCAwLjA1OTU3MDZDOTkuNTI0IDAuMDU5NTcwNiAxMDEuNDkxIDAuMTE5MTgzIDEwMy4zNjkgMC44NjQzMzZDMTA0LjU2MSAxLjM0MTIzIDEwNS42OTQgMS45OTY5NyAxMDYuMjkgMy4xNTk0MUMxMDcuMzAzIDUuMDk2OCAxMDcuMDA1IDguMDE3OCAxMDQuNDEyIDkuNjU3MTRDMTAzLjEwMSAxMC40NjE5IDEwMS43MyAxMC45OTg0IDEwMC4xOCAxMS4xMTc2QzEwMC4wMzEgMTEuMTE3NiA5OS45MTE1IDExLjIwNzEgOTkuNzYyNSAxMS4yMzY5Qzk5Ljg4MTcgMTEuMjk2NSAxMDAuMDAxIDExLjQxNTcgMTAwLjEyIDExLjQ0NTVDMTAyLjA4NyAxMi4xMDEyIDEwMi45MjIgMTMuNzQwNiAxMDMuNTc4IDE1LjUyODlDMTA0LjE0NCAxNy4wNDkxIDEwNC43NCAxOC41Mzk0IDEwNS40ODUgMTkuOTcwMUMxMDUuOTkyIDIwLjk4MzUgMTA3LjA2NSAyMC44OTQgMTA3LjUxMiAxOS44NTA4QzEwNy43NTEgMTkuMzE0MyAxMDcuNzggMTguNTA5NiAxMDcuODcgMTcuOTEzNEMxMDcuOTI5IDE3LjQ2NjMgMTA4LjA0OSAxNy4zNzY5IDEwOC41ODUgMTcuNDA2N0MxMDkuMDYyIDE3LjQzNjUgMTA5LjQ0OSAxNy4zMTczIDEwOS40MiAxNy45MTM0QzEwOS4zNiAxOS42MTI0IDEwOC44MjQgMjEuMjUxNyAxMDcuNjkxIDIyLjU2MzJDMTA2LjQwOSAyNC4wNTM1IDEwMi44MDMgMjQuMDIzNyAxMDEuNDMyIDIyLjM4NDRDMTAwLjM1OSAyMS4wNzI5IDk5Ljg4MTcgMTkuNjEyNCA5OS41ODM2IDE4LjAwMjlDOTkuMzQ1MiAxNi43NTEgOTkuMDE3MyAxNS41Mjg5IDk4Ljc3ODkgMTQuMjc3MUM5OC42ODk0IDEzLjc3MDQgOTguNzc4OSAxMy4xNDQ1IDk4LjIxMjYgMTIuOTA2Qzk3LjQ5NzIgMTIuNjA3OSA5Ni43NTIxIDEyLjM2OTUgOTUuOTc3MSAxMi4xOTA3Qzk1LjQ3MDQgMTIuMDcxNCA5NC45MDQxIDEyLjA3MTQgOTQuMzk3NCAxMi4xMzFDOTQuMTg4NyAxMi4xNjA5IDkzLjg5MDcgMTIuNDU4OSA5My44OTA3IDEyLjYzNzhDOTMuODMxMSAxNC45NjI2IDkzLjgwMTIgMTcuMzE3MyA5My44MDEyIDE5LjY0MjJDOTMuODAxMiAyMS4xMzI1IDk0LjQ1NyAyMS42NjkgOTUuOTQ3MyAyMS41Nzk2Qzk3LjAyMDMgMjEuNDkwMiA5Ny4yNTg4IDIxLjY2OSA5Ny4xMzk1IDIyLjQ3MzhDOTcuMTA5NyAyMi42ODI0IDk2Ljc4MTkgMjMuMDEwMyA5Ni41NzMyIDIzLjAxMDNDOTMuMDU2MSAyMy4wNDAxIDg5LjUwOTIgMjMuMDEwMyA4NS45OTIgMjMuMDEwM0M4NS40NTU1IDIzLjAxMDMgODUuMzM2MyAyMi42ODI0IDg1LjM2NjEgMjIuMjM1M0M4NS4zOTU5IDIxLjc4ODIgODUuNTE1MiAyMS41NDk4IDg2LjA1MTcgMjEuNTQ5OEM4OC42NDQ4IDIxLjU0OTggODguNjc0NiAyMS41MiA4OC43MDQ0IDE4Ljg5N0M4OC42NDQ4IDE2LjQ1MjkgODguNjQ0OCAxNC4wMDg4IDg4LjYxNSAxMS41NjQ3Wk05My43NzE0IDYuMjg5MDVDOTMuODAxMiA2LjI4OTA1IDkzLjgwMTIgNi4yODkwNSA5My44MzEgNi4yODkwNUM5My44MzEgNy40NTE0OSA5My44MDEyIDguNjQzNzMgOTMuODYwOSA5LjgwNjE3QzkzLjg2MDkgMTAuMDE0OCA5NC4wNjk1IDEwLjM3MjUgOTQuMTg4NyAxMC40MDIzQzk1LjcwODggMTAuNTgxMSA5Ny4yMjg5IDEwLjQzMjEgOTguNjg5NCA5Ljk4NTAxQzk5LjU1MzggOS43MTY3NSAxMDAuMjEgOS4xODAyNCAxMDAuNTM3IDguMzc1NDhDMTAxLjI4MyA2LjU4NzExIDEwMS42NyA0Ljc5ODc0IDEwMC41MzcgMy4wNDAxOEMxMDAuMjY5IDIuNjIyOSA5OS44MjIxIDIuMTQ2IDk5LjQwNDggMi4wNTY1OEM5OC4wMDM5IDEuNzg4MzMgOTYuNTczMiAxLjYwOTQ5IDk1LjE3MjMgMS41NDk4OEM5NC4xNTg5IDEuNDkwMjYgOTMuODYwOSAxLjg3Nzc0IDkzLjgzMSAyLjg5MTE1QzkzLjc0MTYgNC4wMjM3OCA5My43NzE0IDUuMTU2NDIgOTMuNzcxNCA2LjI4OTA1WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTM0LjAxMDYgOS43MTY4OEMzNC4wMTA2IDExLjg2MjkgMzMuOTUxIDE0LjAzODggMzQuMDQwNCAxNi4xODQ4QzM0LjA3MDIgMTcuMjU3OCAzNC4yNzg4IDE4LjMzMDggMzQuNjM2NSAxOS4zNDQzQzM1LjMyMjEgMjEuMjgxNiAzNi45NjE0IDIxLjg3NzggMzguODY5IDIyLjA1NjZDNDIuNDc1NSAyMi4zNTQ3IDQ0Ljc0MDggMTkuOTcwMiA0NC45MTk2IDE2LjcyMTNDNDUuMTU4MSAxMi4xMzEyIDQ1LjAwOSA3LjUxMTIzIDQ0Ljk3OTIgMi45MjEwOEM0NC45NzkyIDEuOTk3MSA0NC42NTE0IDEuNjk5MDMgNDMuNjk3NiAxLjYwOTYyQzQzLjE5MDkgMS41Nzk4MSA0Mi43MTQgMS41Nzk4MSA0Mi4yMDczIDEuNjA5NjJDNDEuNjcwOCAxLjYzOTQyIDQxLjU4MTMgMS4zNDEzNiA0MS41ODEzIDAuODk0MjY5QzQxLjYxMTEgMC40NDcxNzcgNDEuNjQwOSAwLjA1OTY5OCA0Mi4yMzcxIDAuMDg5NTA0MUM0NC4yOTM3IDAuMTE5MzEgNDYuMzgwMSAwLjExOTMxIDQ4LjQzNjcgMC4xNDkxMTZDNDguNzk0NCAwLjE0OTExNiA0OS4xNTIxIDAuMTc4OTIyIDQ5LjQ4IDAuMTE5MzFDNTAuMTM1NyAwLjAyOTg5MTggNTAuMzQ0MyAwLjI2ODM0MSA1MC4zMTQ1IDAuODk0MjY5QzUwLjMxNDUgMS41NSA1MC4wMTY1IDEuNjM5NDIgNDkuNDIwMyAxLjYzOTQyQzQ4Ljc2NDYgMS42Mzk0MiA0OC4wNzkxIDEuNjY5MjMgNDcuNTEyOCAxLjkzNzQ4QzQ3LjIxNDcgMi4wODY1MSA0Ny4wMzU5IDIuNzQyMjUgNDcuMDA2IDMuMTg5MzRDNDYuOTQ2NCA0LjcwOTQ1IDQ2Ljk3NjIgNi4yMjk1NiA0Ni45NDY0IDcuNzQ5NjdDNDYuOTE2NiAxMC40NjIgNDYuOTE2NiAxMy4xNDQ2IDQ2Ljg4NjggMTUuODU2OUM0Ni44NTcgMTguODk3MiA0NS41NDU1IDIxLjE5MjIgNDIuODkyOCAyMi43MTIzQzQxLjI4MzMgMjMuNjM2MyAzOS40OTQ5IDIzLjc4NTQgMzcuNzA2NSAyMy43MjU3QzM2LjQyNDkgMjMuNjk1OSAzNS4wODM2IDIzLjU0NjkgMzMuODMxOCAyMy4yMTlDMzEuODM0NyAyMi42NTI3IDMwLjI1NSAyMS4zNzExIDI5LjU2OTUgMTkuMzc0MUMyOS4xMjI0IDE4LjEyMjIgMjguODU0MSAxNi43NTExIDI4LjgyNDMgMTUuNDA5OEMyOC43MzQ5IDExLjQ0NTYgMjguNzY0NyA3LjQ1MTYxIDI4Ljc2NDcgMy40ODc0QzI4Ljc2NDcgMi4xNzU5MyAyOC4yMjgyIDEuNjA5NjIgMjYuOTE2NyAxLjY2OTIzQzI2LjY3ODMgMS42NjkyMyAyNi40MSAxLjY2OTIzIDI2LjE3MTYgMS42Mzk0MkMyNS44MTM5IDEuNjM5NDIgMjUuMzM3IDEuOTA3NjggMjUuMjQ3NiAxLjI1MTk0QzI1LjE1ODIgMC40MTczNzEgMjUuMzM3IDAuMTQ5MTE2IDI2LjExMiAwLjE0OTExNkMyOS42MjkxIDAuMTE5MzEgMzMuMTc2IDAuMTQ5MTE2IDM2LjY5MzEgMC4xNDkxMTZDMzcuMzc4NyAwLjE0OTExNiAzNy4yMjk2IDAuNjg1NjI2IDM3LjE5OTggMS4wNDMzQzM3LjE3IDEuMjUxOTQgMzYuODcyIDEuNTUgMzYuNjYzMyAxLjU3OTgxQzM2LjA5NyAxLjY5OTAzIDM1LjQ3MTEgMS42Mzk0MiAzNC45MDQ4IDEuNzU4NjVDMzQuMTg5NCAxLjkwNzY4IDMzLjk1MSAyLjQxNDM4IDMzLjk1MSAzLjEyOTczQzM0LjAxMDYgNS4yNzU3NyAzNC4wMTA2IDcuNDgxNDIgMzQuMDEwNiA5LjcxNjg4WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTYxLjQ4OTQgMC4wMjk4MDYxQzYzLjM2NzIgMC4wMjk4MDYxIDY1LjI0NDkgMC4wNTk2MTIyIDY3LjA5MjkgMEM2Ny42ODkgMCA2Ny41Njk4IDAuMzU3NjczIDY3LjU5OTYgMC42ODU1NEM2Ny42Mjk0IDEuMDQzMjEgNjcuNzE4OSAxLjQ2MDUgNjcuMTUyNSAxLjUyMDExQzY2LjY0NTggMS41Nzk3MiA2Ni4xMDkzIDEuNjA5NTMgNjUuNjAyNiAxLjcyODc1QzY0LjkxNzEgMS45MDc1OSA2NC42NDg4IDIuNjUyNzQgNjQuOTE3MSAzLjMzODI4QzY2LjY0NTggNy40NTE1MyA2OC4zNzQ2IDExLjUzNSA3MC4xMDMzIDE1LjY0ODJDNzAuMTkyOCAxNS44NTY4IDcwLjM0MTggMTYuMDA1OSA3MC40OTA4IDE2LjE4NDdDNzAuNTUwNCAxNi4wMDU5IDcwLjYzOTkgMTUuNzk3MiA3MC42OTk1IDE1LjYxODRDNzEuNjIzNSAxMy4wODQ5IDcyLjU0NzQgMTAuNTUxNCA3My40NzE0IDguMDE3ODRDNzMuOTc4MSA2LjU4NzE1IDc0LjQ4NDggNS4xODYyNiA3NC45OTE1IDMuNzU1NTdDNzUuMDgxIDMuNTE3MTIgNzUuMTEwOCAzLjI0ODg3IDc1LjExMDggMi45ODA2MUM3NS4xNDA2IDEuOTM3NCA3NC41NDQ1IDEuNDMwNjkgNzMuMjkyNiAxLjQ5MDMxQzczLjA4NCAxLjQ5MDMxIDcyLjkwNTEgMS41MjAxMSA3Mi42OTY1IDEuNTIwMTFDNzEuNzcyNSAxLjU0OTkyIDcxLjYyMzUgMS40MDA4OSA3MS44MDIzIDAuNTA2NzA0QzcxLjgzMjEgMC4zMjc4NjcgNzIuMTYgMC4wMjk4MDYxIDcyLjMzODggMC4wMjk4MDYxQzc0Ljk2MTcgMC4wMjk4MDYxIDc3LjYxNDUgMC4wNTk2MTIyIDgwLjIzNzQgMC4xMTkyMjRDODAuNDQ2MSAwLjExOTIyNCA4MC43NDQxIDAuNDE3Mjg2IDgwLjc3MzkgMC42NTU3MzRDODAuODYzMyAxLjAxMzQxIDgwLjg2MzMgMS41MjAxMSA4MC4yNjcyIDEuNTIwMTFDNzguMjcwMiAxLjU3OTcyIDc3LjIyNyAyLjcxMjM2IDc2LjYwMTEgNC41MDA3MkM3NC44MTI3IDkuNTk3NTcgNzIuOTA1MSAxNC42OTQ0IDcxLjA1NzEgMTkuNzYxNEM3MC42Njk3IDIwLjgwNDcgNzAuNDYxIDIyLjAyNjcgNzAuMDEzOSAyMy4wNDAxQzY5Ljg2NDkgMjMuMzY4IDY5LjcxNTkgMjMuOTM0MyA2OC44MjE3IDIzLjkzNDNDNjguMTY1OSAyMy45MzQzIDY3LjQyMDggMjQuMjkyIDY3LjAzMzMgMjMuMzM4MkM2Ni4xMDkzIDIxLjA3MjkgNjUuMzA0NiAxOC41Mzk0IDY0LjM1MDggMTYuMzAzOUM2My4xNTg1IDEzLjQxMjcgNjEuOTM2NSAxMC40OTE3IDYwLjcxNDQgNy42MDA1NkM2MC4yMDc3IDYuMzc4NTEgNTkuNzAxIDUuMTI2NjUgNTkuMTY0NSAzLjkwNDZDNTguNTM4NiAyLjQ3MzkxIDU3LjM3NjEgMS43Mjg3NSA1NS44NTYgMS42MDk1M0M1NS4yMDAzIDEuNTQ5OTIgNTUuMDIxNSAxLjIyMjA1IDU1LjA4MTEgMC42MjU5MjhDNTUuMTQwNyAtMC4wMjk4MDYyIDU1LjU4NzggMC4wODk0MTgzIDU1Ljk3NTIgMC4wODk0MTgzQzU3Ljg1MyAwLjA1OTYxMjIgNTkuNjcxMiAwLjA1OTYxMjIgNjEuNDg5NCAwLjAyOTgwNjFaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMjAuMTE5MSAxNS41ODkxQzIwLjA1OTUgMTUuNDY5OCAxOS44NTA5IDE1LjQxMDIgMTkuNzAxOCAxNS40MTAyQzE5LjU1MjggMTUuNDEwMiAxOS4zNzQgMTUuNTg5MSAxOS4yNTQ3IDE1LjU1OTNDMTguNzE4MiAxNS4zNTA2IDE4LjU2OTIgMTUuNjc4NSAxOC40NSAxNi4wOTU4QzE4LjI3MTEgMTYuNjkxOSAxOC4xMjIxIDE3LjI1ODIgMTcuOTQzMyAxNy44NTQzQzE3LjIyNzkgMjAuMDAwNCAxNS40MDk4IDIwLjY1NjEgMTMuNTkxNiAyMS4yODJDMTIuOTk1NSAyMS40OTA3IDEyLjM2OTUgMjEuNjA5OSAxMS43NDM2IDIxLjYwOTlDMTAuOTY4NiAyMS42MDk5IDEwLjE2MzkgMjEuNjM5NyA5LjM4ODkyIDIxLjYzOTdDOS4zMjkzMSAyMS42Mzk3IDguOTcxNjQgMjEuMzQxNiA4Ljk3MTY0IDIxLjI4MkM4LjY3MzU4IDIwLjY4NTkgOC43MDMzOCAxOS45NDA4IDguNzAzMzggMTkuNDkzN0w4Ljc5MjggMi44NjE4NUM4Ljc5MjggMi40NDQ1NyA4Ljk0MTgzIDEuODQ4NDUgOS4xNTA0NyAxLjc4ODgzQzkuODA2MjEgMS42MSAxMC41NTE0IDEuNTgwMTkgMTEuMjM2OSAxLjU4MDE5QzExLjk4MjEgMS41ODAxOSAxMi4wMTE5IDEuMTYyOTEgMTIuMDExOSAwLjYyNjM5NkMxMi4wMTE5IDAuMDYwMDc5NSAxMS42NTQyIDAuMDMwMjczNCAxMS4yNjY3IDAuMDMwMjczNEM3LjgzOSAwLjAzMDI3MzQgNC40MTEzIDAuMDMwMjczNCAwLjk4MzYwMSAwLjAzMDI3MzRDMC43NDUxNTMgMC4wNjAwNzk2IDAgLTAuMDI5MzM4OCAwIDAuMjk4NTI4QzAgMC42NTYyMDIgMCAwLjg5NDY1MSAwIDEuMzExOTRDMCAxLjQ2MDk3IDAuMzU3NjczIDEuNTUwMzkgMC41NjYzMTYgMS41ODAxOUMxLjA3MzAyIDEuNjEgMS41NDk5MiAxLjU1MDM5IDIuMDU2NjIgMS41NTAzOUMyLjg2MTM5IDEuNTUwMzkgMy4yMTkwNiAxLjg0ODQ1IDMuMjQ4ODYgMi42MjM0MUwzLjMwODQ4IDIwLjAwMDRDMy4zMDg0OCAyMC41NjY3IDMuMjc4NjcgMjEuMTkyNiAyLjYyMjk0IDIxLjM0MTZDMi4wMjY4MSAyMS40OTA3IDEuMzcxMDggMjEuNTIwNSAwLjc0NTE1MyAyMS41MjA1QzAuMDI5ODA2MSAyMS41MjA1IDAgMjEuOTM3OCAwIDIyLjQ3NDNDMCAyMy4wNzA0IDAuMzI3ODY3IDIzLjEwMDIgMC43NzQ5NTkgMjMuMTAwMkwxOS40OTMyIDIzLjA3MDRDMTkuOTQwMyAyMy4wNzA0IDIwLjE0ODkgMjIuOTUxMiAyMC4xNDg5IDIyLjQ0NDVDMjAuMTQ4OSAyMC4zODc5IDIwLjE3ODcgMTguMzMxMiAyMC4xNzg3IDE2LjI3NDZDMjAuMjA4NSAxNi4wMzYyIDIwLjIwODUgMTUuNzY3OSAyMC4xMTkxIDE1LjU4OTFaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K" alt="Logo">
+                </a>
+                <div class="search">
+                    <div class="search-popup">
+                        <input class="search__input" type="text" placeholder="Поиск по товарам">
+                    </div>
+                    <a class="search-link" href="#">
+                        <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M18.188 9.662a8.526 8.526 0 1 1-17.051 0 8.526 8.526 0 0 1 17.051 0zm-1.303 6.42a9.626 9.626 0 0 0 2.44-6.42C19.325 4.326 14.999 0 9.662 0a9.662 9.662 0 1 0 0 19.325 9.626 9.626 0 0 0 6.42-2.44L21.195 22l.804-.804-5.115-5.115z"
+                                fill="#000" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="menu-overlay">
+            </div>
+            <div class="header__bottom">
+                <div class="header__location">
+                    <span class="location-item app-location">Ваш город</span>
+                    <div class="modal-location">
+                        <a class="location-item" href="#">Алматы</a>
+                        <a class="location-item" href="#">Астана</a>
+                        <a class="location-item" href="#">Костанай</a>
+                        <a class="location-item" href="#">Казахстан</a>
+                        <a class="location-item" href="#">Россия</a>
+                    </div>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                каталог
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                акции
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                новинки
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">
+                                магазины
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="user-nav">
+                    <li class="user-nav__item">
+                        <a class="user-nav__link favor-link" href="#">
+                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="m22.449 12.702.357.35-.357-.35-5.773 5.91-3.235 3.31-.441.453-.442-.452-3.235-3.312-.357.35.357-.35-5.772-5.909c-.635-.65-1.783-2.167-2.264-3.97C.83 7.014.965 5.06 2.805 3.177c.93-.953 1.862-1.444 2.75-1.648.892-.206 1.772-.13 2.608.103 1.745.487 3.22 1.655 3.858 2.307l.62.635.358.366.358-.366.62-.635c.638-.652 2.114-1.82 3.859-2.307l-.134-.48.134.48c.835-.233 1.716-.309 2.608-.103.888.204 1.82.696 2.75 1.648 1.84 1.884 1.976 3.838 1.519 5.554-.48 1.803-1.628 3.32-2.264 3.97z"
+                                    stroke="#000" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="user-nav__item">
+                        <a class="user-nav__link basket-link" href="#">
+                            <span class="nav__num">12</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="26px" height="24px" viewBox="0 0 26 24" version="1.1">
+                                <path
+                                    style="fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:10;"
+                                    stroke="rgb(0%,0%,0%)" d="M 44 18 L 54 18 L 54 63 L 10 63 L 10 18 Z M 44 18 "
+                                    transform="matrix(0.40625,0,0,0.375,0,0)" />
+                                <path
+                                    style="fill:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:10;"
+                                    stroke="rgb(0%,0%,0%)"
+                                    d="M 22 24 L 22 11 C 22 5.479167 26.480769 1 32 1 C 37.519231 1 42 5.479167 42 11 L 42 24 "
+                                    transform="matrix(0.40625,0,0,0.375,0,0)" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="user-nav__item">
+                        <a class="user-nav__link user-link" href="#">
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="11.5" stroke="#000" />
+                                <path d="M15 8.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM20.074 20.726a8.504 8.504 0 0 0-16.074 0"
+                                    stroke="#000" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <section class="delivery service">
+    <div class="container">
+        <h1 class="service__title">Доставка и оплата</h1>
+        <div class="delivery__inner service__inner">
+            <div class="delivery__item service__item">
+                <h2 class="delivery__subtitle service__subtitle">Оформление заказа</h2>
+                <div class="delivery__box service__box">
+                    <p class="delivery__text service__text">
+                    <ul class="delivery__list service__list">
+                        <li class="delivery__list-item service__list-item">
+                            Нажмите на карточку товара и выберете нужный вам объём. Далее нажмите кнопку «Добавить в
+                            корзину». Вы можете добавить несколько товаров в карзину.
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Перейдите в раздел «Корзина».
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Для заказа укажите Ваши контактные данные (Ф.И.О. получателя, телефон, электронную почту,
+                            город доставки, адрес).
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Выберите удобный способ оплаты (Карта Visa/Mastercard, Kaspi Red/Рассрочка, Qiwi кошелек).
+                            Если вы заказываете из России, можете оплатить через Qiwi кошелек.
+                        </li>
+                        <li class="delivery__list-item service__list-item">Нажмите кнопку «Купить».</li>
+                        <li class="delivery__list-item service__list-item">
+                            После оформления заказа Вы получите на ваш электронный адрес сообщение, содержащее
+                            информацию
+                            о заказе (номер заказа, состав и стоимость заказа).
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Перед отправлением заказа вам позвонит менеджер для подтверждения адреса и времени доставки.
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Информацию о своих заказах (актуальных и выполненных) Вы всегда сможете посмотреть в своем
+                            аккаунте в разделе “История заказов”.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="delivery__item service__item">
+                <h2 class="delivery__subtitle service__subtitle">Личный кабинет</h2>
+                <div class="delivery__box service__box">
+                    <p class="delivery__text service__text">
+                        Для входа в аккаунт необходимо ввести номер мобильного телефона. После вы получите SMS-сообщение
+                        с кодом для авторизации.
+                    </p>
+                </div>
+            </div>
+
+            <div class="delivery__item service__item">
+                <h2 class="delivery__subtitle service__subtitle">Доставка</h2>
+                <div class="delivery__box service__box">
+                    <p class="service__text">
+                    <ul class="delivery__list service__list">
+                        <li class="delivery__list-item service__list-item">
+                            Доставка по Алмате, Астане производится через яндекс курьер. При заказе от 25.000 тг,
+                            доставка по городу бесплатно.
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Доставка в другие города Казахстана производиться через курьерскую CDEK. Если вы заказали
+                            до 12:00 по времени Астаны, ваш заказ будет передан в курьерскую службу в тот же день. Если
+                            вы заказали после 12:00 по времени Астаны, ваш заказ будет передан в курьерскую службу на
+                            следующий день. Доставка по Казахстану бесплатно при заказе от 75.000 тг.
+                        </li>
+                        <li class="delivery__list-item service__list-item">
+                            Доставка по СНГ производиться через курьерскую службу CDEK. Если вы заказали до 12:00 по
+                            времени Астаны, ваш заказ будет передан в курьерскую службу в тот же день. Если вы заказали
+                            после 12:00 по времени Астаны, ваш заказ будет передан в курьерскую службу на следующий
+                            день. Доставка по Казахстану бесплатно при заказе от 75.000 тг.
+                        </li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+
+            <div class="delivery__item service__item">
+                <h2 class="delivery__subtitle service__subtitle">Можно ли обменять или вернуть товар?</h2>
+                <div class="delivery__box service__box">
+                    <p class="delivery__text service__text">
+                        В соответствии с Законом Республики Казахстан “О защите прав потребителей”
+                        парфюмерно-косметические изделия потребитель может вернуть в течение 14 дней, если приобретенный
+                        товар не был вскрыт и использован, имеет при себе ярлычки и целостность упаковки (слюда), либо в
+                        случае предоставления документа о том что товар ненадлежащего качества. Не принадлежит возврату
+                        товар приобретенный по акции и скидке.
+                    </p>
+                </div>
+            </div>
+
+            <div class="delivery__item service__item">
+                <h2 class="delivery__subtitle service__subtitle">Что делать, если Вам доставили бракованный
+                    товар?</h2>
+                <div class="delivery__box service__box">
+                    <p class="delivery__text service__text">
+                        Если Вы получили товар с заводским дефектом, этот товар подлежит возврату. В случае возврата Вам
+                        необходимо написать на WhatsApp +77073593441 и прикрепить фотографию чека, фотографию товара и
+                        его штрих код. После получения заявки на возврат с Вами свяжется администратор магазина. При
+                        возврате Вам необходимо предъявить сам товар и сопроводительные документы к заказу. Возврат
+                        денежных средств осуществляется на расчётный счёт.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__column">
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Акции
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Доставка и оплата
+                        </a>
+                    </li>
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            Часто задаваемые вопросы
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <ul class="footer__menu">
+                    <li class="footer__item">
+                        <a class="footer__link-contact" href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_401_207)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M7.7589 21.9285C8.79068 21.9989 10.1089 22 12 22C13.8911 22 15.2093 21.9989 16.2411 21.9285C17.2549 21.8593 17.8453 21.73 18.2961 21.5433C19.7663 20.9343 20.9343 19.7663 21.5433 18.2961C21.73 17.8453 21.8593 17.2549 21.9285 16.2411C21.9989 15.2093 22 13.8911 22 12C22 10.1089 21.9989 8.79068 21.9285 7.7589C21.8593 6.74507 21.73 6.15467 21.5433 5.7039C20.9343 4.23373 19.7663 3.06569 18.2961 2.45672C17.8453 2.27001 17.2549 2.14065 16.2411 2.07148C15.2093 2.00108 13.8911 2 12 2C10.1089 2 8.79068 2.00108 7.7589 2.07148C6.74507 2.14065 6.15467 2.27001 5.7039 2.45672C4.23373 3.06569 3.06569 4.23373 2.45672 5.7039C2.27001 6.15467 2.14065 6.74507 2.07148 7.7589C2.00108 8.79068 2 10.1089 2 12C2 13.8911 2.00108 15.2093 2.07148 16.2411C2.14065 17.2549 2.27001 17.8453 2.45672 18.2961C3.06569 19.7663 4.23373 20.9343 5.7039 21.5433C6.15467 21.73 6.74507 21.8593 7.7589 21.9285ZM0.608964 4.93853C0 6.4087 0 8.27247 0 12C0 15.7275 0 17.5913 0.608964 19.0615C1.42092 21.0217 2.97831 22.5791 4.93853 23.391C6.4087 24 8.27247 24 12 24C15.7275 24 17.5913 24 19.0615 23.391C21.0217 22.5791 22.5791 21.0217 23.391 19.0615C24 17.5913 24 15.7275 24 12C24 8.27247 24 6.4087 23.391 4.93853C22.5791 2.97831 21.0217 1.42092 19.0615 0.608964C17.5913 0 15.7275 0 12 0C8.27247 0 6.4087 0 4.93853 0.608964C2.97831 1.42092 1.42092 2.97831 0.608964 4.93853Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M11.9999 15.7157C14.0513 15.7157 15.7142 14.0527 15.7142 12.0014C15.7142 9.95005 14.0513 8.28711 11.9999 8.28711C9.94859 8.28711 8.28564 9.95005 8.28564 12.0014C8.28564 14.0527 9.94859 15.7157 11.9999 15.7157ZM11.9999 17.7157C15.1558 17.7157 17.7142 15.1573 17.7142 12.0014C17.7142 8.84548 15.1558 6.28711 11.9999 6.28711C8.84402 6.28711 6.28564 8.84548 6.28564 12.0014C6.28564 15.1573 8.84402 17.7157 11.9999 17.7157Z"
+                                        fill="black" />
+                                    <path
+                                        d="M19.4288 5.71317C19.4288 6.34435 18.9171 6.85603 18.2859 6.85603C17.6547 6.85603 17.1431 6.34435 17.1431 5.71317C17.1431 5.08199 17.6547 4.57031 18.2859 4.57031C18.9171 4.57031 19.4288 5.08199 19.4288 5.71317Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_401_207">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            @luvr_kz
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link-contact" href="tel:+77073593441">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_401_249)">
+                                    <path
+                                        d="M6.5201 21.9496C4.5019 22.4799 2.5527 22.9761 0.5 23.5064C0.534499 23.2498 0.551749 23.0616 0.603497 22.8905C0.810492 22.1036 0.982988 21.2823 1.25898 20.5125C1.86272 18.8187 1.86272 17.3132 1.18998 15.5168C-1.13871 9.34063 2.74244 2.4459 9.17653 0.837707C15.6279 -0.77049 22.2344 3.40398 23.3039 9.85388C24.0801 14.4561 22.5449 18.2541 18.819 21.077C15.3001 23.7631 10.66 24.0368 6.5201 21.9496ZM3.24268 20.7691C4.2949 20.4954 5.24363 20.2216 6.22685 20.0334C6.57185 19.965 7.02033 19.9992 7.33083 20.1532C9.17653 21.1113 11.1085 21.5219 13.1957 21.2823C18.5258 20.6835 22.2344 15.7563 21.4237 10.2987C20.6647 5.26881 15.4726 1.64181 10.384 2.59988C3.76017 3.8488 0.48275 10.8975 3.79467 16.7486C3.98441 17.0908 4.01891 17.604 3.94991 17.9975C3.77742 18.8872 3.50142 19.7768 3.24268 20.7691Z"
+                                        fill="black" />
+                                    <path
+                                        d="M9.07313 10.9803C10.1426 12.9135 11.5398 14.1454 13.5235 14.8126C13.9893 14.2993 14.4205 13.7861 14.938 13.2044C15.8867 13.6492 16.8354 14.094 17.7324 14.5046C18.0084 16.0786 17.1114 17.1907 15.5072 17.3618C14.041 17.5328 12.7473 16.934 11.5398 16.2668C9.43537 15.1205 7.88291 13.3755 6.72719 11.3225C5.83021 9.71426 6.0027 8.20871 7.10668 7.09666C7.9174 6.27545 8.86613 6.44654 9.31462 7.49016C9.36637 7.59281 9.38362 7.71257 9.43537 7.79811C10.0219 8.92727 10.5393 10.0564 9.07313 10.9803Z"
+                                        fill="black" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_401_249">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                            +77073593441
+                        </a>
+                    </li>
+                </ul>
+                <a class="footer__logo" href="#">
+                    <img class="footer__logo-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEwIiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMTEwIDI0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNODguNjE1IDExLjU2NDdDODguNjE1IDguODUyMzggODguNjE1IDYuMTQwMDIgODguNjE1IDMuNDI3NjZDODguNjE1IDEuOTk2OTcgODguMjg3MSAxLjU3OTY4IDg2Ljg1NjQgMS41MjAwN0M4Ni41Mjg2IDEuNDkwMjYgODYuMjMwNSAxLjUyMDA3IDg1LjkwMjYgMS41NDk4OEM4NS40NTU1IDEuNTc5NjggODUuMjc2NyAxLjM3MTA0IDg1LjI0NjkgMC45NTM3NTRDODUuMTg3MyAwLjA1OTU3MDcgODUuMjQ2OSAwLjAyOTc2NDUgODYuMTcwOSAwLjA1OTU3MDZDODkuOTU2MyAwLjA4OTM3NjcgOTMuNzcxNCAwLjA4OTM3NjcgOTcuNTU2OCAwLjA1OTU3MDZDOTkuNTI0IDAuMDU5NTcwNiAxMDEuNDkxIDAuMTE5MTgzIDEwMy4zNjkgMC44NjQzMzZDMTA0LjU2MSAxLjM0MTIzIDEwNS42OTQgMS45OTY5NyAxMDYuMjkgMy4xNTk0MUMxMDcuMzAzIDUuMDk2OCAxMDcuMDA1IDguMDE3OCAxMDQuNDEyIDkuNjU3MTRDMTAzLjEwMSAxMC40NjE5IDEwMS43MyAxMC45OTg0IDEwMC4xOCAxMS4xMTc2QzEwMC4wMzEgMTEuMTE3NiA5OS45MTE1IDExLjIwNzEgOTkuNzYyNSAxMS4yMzY5Qzk5Ljg4MTcgMTEuMjk2NSAxMDAuMDAxIDExLjQxNTcgMTAwLjEyIDExLjQ0NTVDMTAyLjA4NyAxMi4xMDEyIDEwMi45MjIgMTMuNzQwNiAxMDMuNTc4IDE1LjUyODlDMTA0LjE0NCAxNy4wNDkxIDEwNC43NCAxOC41Mzk0IDEwNS40ODUgMTkuOTcwMUMxMDUuOTkyIDIwLjk4MzUgMTA3LjA2NSAyMC44OTQgMTA3LjUxMiAxOS44NTA4QzEwNy43NTEgMTkuMzE0MyAxMDcuNzggMTguNTA5NiAxMDcuODcgMTcuOTEzNEMxMDcuOTI5IDE3LjQ2NjMgMTA4LjA0OSAxNy4zNzY5IDEwOC41ODUgMTcuNDA2N0MxMDkuMDYyIDE3LjQzNjUgMTA5LjQ0OSAxNy4zMTczIDEwOS40MiAxNy45MTM0QzEwOS4zNiAxOS42MTI0IDEwOC44MjQgMjEuMjUxNyAxMDcuNjkxIDIyLjU2MzJDMTA2LjQwOSAyNC4wNTM1IDEwMi44MDMgMjQuMDIzNyAxMDEuNDMyIDIyLjM4NDRDMTAwLjM1OSAyMS4wNzI5IDk5Ljg4MTcgMTkuNjEyNCA5OS41ODM2IDE4LjAwMjlDOTkuMzQ1MiAxNi43NTEgOTkuMDE3MyAxNS41Mjg5IDk4Ljc3ODkgMTQuMjc3MUM5OC42ODk0IDEzLjc3MDQgOTguNzc4OSAxMy4xNDQ1IDk4LjIxMjYgMTIuOTA2Qzk3LjQ5NzIgMTIuNjA3OSA5Ni43NTIxIDEyLjM2OTUgOTUuOTc3MSAxMi4xOTA3Qzk1LjQ3MDQgMTIuMDcxNCA5NC45MDQxIDEyLjA3MTQgOTQuMzk3NCAxMi4xMzFDOTQuMTg4NyAxMi4xNjA5IDkzLjg5MDcgMTIuNDU4OSA5My44OTA3IDEyLjYzNzhDOTMuODMxMSAxNC45NjI2IDkzLjgwMTIgMTcuMzE3MyA5My44MDEyIDE5LjY0MjJDOTMuODAxMiAyMS4xMzI1IDk0LjQ1NyAyMS42NjkgOTUuOTQ3MyAyMS41Nzk2Qzk3LjAyMDMgMjEuNDkwMiA5Ny4yNTg4IDIxLjY2OSA5Ny4xMzk1IDIyLjQ3MzhDOTcuMTA5NyAyMi42ODI0IDk2Ljc4MTkgMjMuMDEwMyA5Ni41NzMyIDIzLjAxMDNDOTMuMDU2MSAyMy4wNDAxIDg5LjUwOTIgMjMuMDEwMyA4NS45OTIgMjMuMDEwM0M4NS40NTU1IDIzLjAxMDMgODUuMzM2MyAyMi42ODI0IDg1LjM2NjEgMjIuMjM1M0M4NS4zOTU5IDIxLjc4ODIgODUuNTE1MiAyMS41NDk4IDg2LjA1MTcgMjEuNTQ5OEM4OC42NDQ4IDIxLjU0OTggODguNjc0NiAyMS41MiA4OC43MDQ0IDE4Ljg5N0M4OC42NDQ4IDE2LjQ1MjkgODguNjQ0OCAxNC4wMDg4IDg4LjYxNSAxMS41NjQ3Wk05My43NzE0IDYuMjg5MDVDOTMuODAxMiA2LjI4OTA1IDkzLjgwMTIgNi4yODkwNSA5My44MzEgNi4yODkwNUM5My44MzEgNy40NTE0OSA5My44MDEyIDguNjQzNzMgOTMuODYwOSA5LjgwNjE3QzkzLjg2MDkgMTAuMDE0OCA5NC4wNjk1IDEwLjM3MjUgOTQuMTg4NyAxMC40MDIzQzk1LjcwODggMTAuNTgxMSA5Ny4yMjg5IDEwLjQzMjEgOTguNjg5NCA5Ljk4NTAxQzk5LjU1MzggOS43MTY3NSAxMDAuMjEgOS4xODAyNCAxMDAuNTM3IDguMzc1NDhDMTAxLjI4MyA2LjU4NzExIDEwMS42NyA0Ljc5ODc0IDEwMC41MzcgMy4wNDAxOEMxMDAuMjY5IDIuNjIyOSA5OS44MjIxIDIuMTQ2IDk5LjQwNDggMi4wNTY1OEM5OC4wMDM5IDEuNzg4MzMgOTYuNTczMiAxLjYwOTQ5IDk1LjE3MjMgMS41NDk4OEM5NC4xNTg5IDEuNDkwMjYgOTMuODYwOSAxLjg3Nzc0IDkzLjgzMSAyLjg5MTE1QzkzLjc0MTYgNC4wMjM3OCA5My43NzE0IDUuMTU2NDIgOTMuNzcxNCA2LjI4OTA1WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTM0LjAxMDYgOS43MTY4OEMzNC4wMTA2IDExLjg2MjkgMzMuOTUxIDE0LjAzODggMzQuMDQwNCAxNi4xODQ4QzM0LjA3MDIgMTcuMjU3OCAzNC4yNzg4IDE4LjMzMDggMzQuNjM2NSAxOS4zNDQzQzM1LjMyMjEgMjEuMjgxNiAzNi45NjE0IDIxLjg3NzggMzguODY5IDIyLjA1NjZDNDIuNDc1NSAyMi4zNTQ3IDQ0Ljc0MDggMTkuOTcwMiA0NC45MTk2IDE2LjcyMTNDNDUuMTU4MSAxMi4xMzEyIDQ1LjAwOSA3LjUxMTIzIDQ0Ljk3OTIgMi45MjEwOEM0NC45NzkyIDEuOTk3MSA0NC42NTE0IDEuNjk5MDMgNDMuNjk3NiAxLjYwOTYyQzQzLjE5MDkgMS41Nzk4MSA0Mi43MTQgMS41Nzk4MSA0Mi4yMDczIDEuNjA5NjJDNDEuNjcwOCAxLjYzOTQyIDQxLjU4MTMgMS4zNDEzNiA0MS41ODEzIDAuODk0MjY5QzQxLjYxMTEgMC40NDcxNzcgNDEuNjQwOSAwLjA1OTY5OCA0Mi4yMzcxIDAuMDg5NTA0MUM0NC4yOTM3IDAuMTE5MzEgNDYuMzgwMSAwLjExOTMxIDQ4LjQzNjcgMC4xNDkxMTZDNDguNzk0NCAwLjE0OTExNiA0OS4xNTIxIDAuMTc4OTIyIDQ5LjQ4IDAuMTE5MzFDNTAuMTM1NyAwLjAyOTg5MTggNTAuMzQ0MyAwLjI2ODM0MSA1MC4zMTQ1IDAuODk0MjY5QzUwLjMxNDUgMS41NSA1MC4wMTY1IDEuNjM5NDIgNDkuNDIwMyAxLjYzOTQyQzQ4Ljc2NDYgMS42Mzk0MiA0OC4wNzkxIDEuNjY5MjMgNDcuNTEyOCAxLjkzNzQ4QzQ3LjIxNDcgMi4wODY1MSA0Ny4wMzU5IDIuNzQyMjUgNDcuMDA2IDMuMTg5MzRDNDYuOTQ2NCA0LjcwOTQ1IDQ2Ljk3NjIgNi4yMjk1NiA0Ni45NDY0IDcuNzQ5NjdDNDYuOTE2NiAxMC40NjIgNDYuOTE2NiAxMy4xNDQ2IDQ2Ljg4NjggMTUuODU2OUM0Ni44NTcgMTguODk3MiA0NS41NDU1IDIxLjE5MjIgNDIuODkyOCAyMi43MTIzQzQxLjI4MzMgMjMuNjM2MyAzOS40OTQ5IDIzLjc4NTQgMzcuNzA2NSAyMy43MjU3QzM2LjQyNDkgMjMuNjk1OSAzNS4wODM2IDIzLjU0NjkgMzMuODMxOCAyMy4yMTlDMzEuODM0NyAyMi42NTI3IDMwLjI1NSAyMS4zNzExIDI5LjU2OTUgMTkuMzc0MUMyOS4xMjI0IDE4LjEyMjIgMjguODU0MSAxNi43NTExIDI4LjgyNDMgMTUuNDA5OEMyOC43MzQ5IDExLjQ0NTYgMjguNzY0NyA3LjQ1MTYxIDI4Ljc2NDcgMy40ODc0QzI4Ljc2NDcgMi4xNzU5MyAyOC4yMjgyIDEuNjA5NjIgMjYuOTE2NyAxLjY2OTIzQzI2LjY3ODMgMS42NjkyMyAyNi40MSAxLjY2OTIzIDI2LjE3MTYgMS42Mzk0MkMyNS44MTM5IDEuNjM5NDIgMjUuMzM3IDEuOTA3NjggMjUuMjQ3NiAxLjI1MTk0QzI1LjE1ODIgMC40MTczNzEgMjUuMzM3IDAuMTQ5MTE2IDI2LjExMiAwLjE0OTExNkMyOS42MjkxIDAuMTE5MzEgMzMuMTc2IDAuMTQ5MTE2IDM2LjY5MzEgMC4xNDkxMTZDMzcuMzc4NyAwLjE0OTExNiAzNy4yMjk2IDAuNjg1NjI2IDM3LjE5OTggMS4wNDMzQzM3LjE3IDEuMjUxOTQgMzYuODcyIDEuNTUgMzYuNjYzMyAxLjU3OTgxQzM2LjA5NyAxLjY5OTAzIDM1LjQ3MTEgMS42Mzk0MiAzNC45MDQ4IDEuNzU4NjVDMzQuMTg5NCAxLjkwNzY4IDMzLjk1MSAyLjQxNDM4IDMzLjk1MSAzLjEyOTczQzM0LjAxMDYgNS4yNzU3NyAzNC4wMTA2IDcuNDgxNDIgMzQuMDEwNiA5LjcxNjg4WiIgZmlsbD0iYmxhY2siLz4KPHBhdGggZD0iTTYxLjQ4OTQgMC4wMjk4MDYxQzYzLjM2NzIgMC4wMjk4MDYxIDY1LjI0NDkgMC4wNTk2MTIyIDY3LjA5MjkgMEM2Ny42ODkgMCA2Ny41Njk4IDAuMzU3NjczIDY3LjU5OTYgMC42ODU1NEM2Ny42Mjk0IDEuMDQzMjEgNjcuNzE4OSAxLjQ2MDUgNjcuMTUyNSAxLjUyMDExQzY2LjY0NTggMS41Nzk3MiA2Ni4xMDkzIDEuNjA5NTMgNjUuNjAyNiAxLjcyODc1QzY0LjkxNzEgMS45MDc1OSA2NC42NDg4IDIuNjUyNzQgNjQuOTE3MSAzLjMzODI4QzY2LjY0NTggNy40NTE1MyA2OC4zNzQ2IDExLjUzNSA3MC4xMDMzIDE1LjY0ODJDNzAuMTkyOCAxNS44NTY4IDcwLjM0MTggMTYuMDA1OSA3MC40OTA4IDE2LjE4NDdDNzAuNTUwNCAxNi4wMDU5IDcwLjYzOTkgMTUuNzk3MiA3MC42OTk1IDE1LjYxODRDNzEuNjIzNSAxMy4wODQ5IDcyLjU0NzQgMTAuNTUxNCA3My40NzE0IDguMDE3ODRDNzMuOTc4MSA2LjU4NzE1IDc0LjQ4NDggNS4xODYyNiA3NC45OTE1IDMuNzU1NTdDNzUuMDgxIDMuNTE3MTIgNzUuMTEwOCAzLjI0ODg3IDc1LjExMDggMi45ODA2MUM3NS4xNDA2IDEuOTM3NCA3NC41NDQ1IDEuNDMwNjkgNzMuMjkyNiAxLjQ5MDMxQzczLjA4NCAxLjQ5MDMxIDcyLjkwNTEgMS41MjAxMSA3Mi42OTY1IDEuNTIwMTFDNzEuNzcyNSAxLjU0OTkyIDcxLjYyMzUgMS40MDA4OSA3MS44MDIzIDAuNTA2NzA0QzcxLjgzMjEgMC4zMjc4NjcgNzIuMTYgMC4wMjk4MDYxIDcyLjMzODggMC4wMjk4MDYxQzc0Ljk2MTcgMC4wMjk4MDYxIDc3LjYxNDUgMC4wNTk2MTIyIDgwLjIzNzQgMC4xMTkyMjRDODAuNDQ2MSAwLjExOTIyNCA4MC43NDQxIDAuNDE3Mjg2IDgwLjc3MzkgMC42NTU3MzRDODAuODYzMyAxLjAxMzQxIDgwLjg2MzMgMS41MjAxMSA4MC4yNjcyIDEuNTIwMTFDNzguMjcwMiAxLjU3OTcyIDc3LjIyNyAyLjcxMjM2IDc2LjYwMTEgNC41MDA3MkM3NC44MTI3IDkuNTk3NTcgNzIuOTA1MSAxNC42OTQ0IDcxLjA1NzEgMTkuNzYxNEM3MC42Njk3IDIwLjgwNDcgNzAuNDYxIDIyLjAyNjcgNzAuMDEzOSAyMy4wNDAxQzY5Ljg2NDkgMjMuMzY4IDY5LjcxNTkgMjMuOTM0MyA2OC44MjE3IDIzLjkzNDNDNjguMTY1OSAyMy45MzQzIDY3LjQyMDggMjQuMjkyIDY3LjAzMzMgMjMuMzM4MkM2Ni4xMDkzIDIxLjA3MjkgNjUuMzA0NiAxOC41Mzk0IDY0LjM1MDggMTYuMzAzOUM2My4xNTg1IDEzLjQxMjcgNjEuOTM2NSAxMC40OTE3IDYwLjcxNDQgNy42MDA1NkM2MC4yMDc3IDYuMzc4NTEgNTkuNzAxIDUuMTI2NjUgNTkuMTY0NSAzLjkwNDZDNTguNTM4NiAyLjQ3MzkxIDU3LjM3NjEgMS43Mjg3NSA1NS44NTYgMS42MDk1M0M1NS4yMDAzIDEuNTQ5OTIgNTUuMDIxNSAxLjIyMjA1IDU1LjA4MTEgMC42MjU5MjhDNTUuMTQwNyAtMC4wMjk4MDYyIDU1LjU4NzggMC4wODk0MTgzIDU1Ljk3NTIgMC4wODk0MTgzQzU3Ljg1MyAwLjA1OTYxMjIgNTkuNjcxMiAwLjA1OTYxMjIgNjEuNDg5NCAwLjAyOTgwNjFaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMjAuMTE5MSAxNS41ODkxQzIwLjA1OTUgMTUuNDY5OCAxOS44NTA5IDE1LjQxMDIgMTkuNzAxOCAxNS40MTAyQzE5LjU1MjggMTUuNDEwMiAxOS4zNzQgMTUuNTg5MSAxOS4yNTQ3IDE1LjU1OTNDMTguNzE4MiAxNS4zNTA2IDE4LjU2OTIgMTUuNjc4NSAxOC40NSAxNi4wOTU4QzE4LjI3MTEgMTYuNjkxOSAxOC4xMjIxIDE3LjI1ODIgMTcuOTQzMyAxNy44NTQzQzE3LjIyNzkgMjAuMDAwNCAxNS40MDk4IDIwLjY1NjEgMTMuNTkxNiAyMS4yODJDMTIuOTk1NSAyMS40OTA3IDEyLjM2OTUgMjEuNjA5OSAxMS43NDM2IDIxLjYwOTlDMTAuOTY4NiAyMS42MDk5IDEwLjE2MzkgMjEuNjM5NyA5LjM4ODkyIDIxLjYzOTdDOS4zMjkzMSAyMS42Mzk3IDguOTcxNjQgMjEuMzQxNiA4Ljk3MTY0IDIxLjI4MkM4LjY3MzU4IDIwLjY4NTkgOC43MDMzOCAxOS45NDA4IDguNzAzMzggMTkuNDkzN0w4Ljc5MjggMi44NjE4NUM4Ljc5MjggMi40NDQ1NyA4Ljk0MTgzIDEuODQ4NDUgOS4xNTA0NyAxLjc4ODgzQzkuODA2MjEgMS42MSAxMC41NTE0IDEuNTgwMTkgMTEuMjM2OSAxLjU4MDE5QzExLjk4MjEgMS41ODAxOSAxMi4wMTE5IDEuMTYyOTEgMTIuMDExOSAwLjYyNjM5NkMxMi4wMTE5IDAuMDYwMDc5NSAxMS42NTQyIDAuMDMwMjczNCAxMS4yNjY3IDAuMDMwMjczNEM3LjgzOSAwLjAzMDI3MzQgNC40MTEzIDAuMDMwMjczNCAwLjk4MzYwMSAwLjAzMDI3MzRDMC43NDUxNTMgMC4wNjAwNzk2IDAgLTAuMDI5MzM4OCAwIDAuMjk4NTI4QzAgMC42NTYyMDIgMCAwLjg5NDY1MSAwIDEuMzExOTRDMCAxLjQ2MDk3IDAuMzU3NjczIDEuNTUwMzkgMC41NjYzMTYgMS41ODAxOUMxLjA3MzAyIDEuNjEgMS41NDk5MiAxLjU1MDM5IDIuMDU2NjIgMS41NTAzOUMyLjg2MTM5IDEuNTUwMzkgMy4yMTkwNiAxLjg0ODQ1IDMuMjQ4ODYgMi42MjM0MUwzLjMwODQ4IDIwLjAwMDRDMy4zMDg0OCAyMC41NjY3IDMuMjc4NjcgMjEuMTkyNiAyLjYyMjk0IDIxLjM0MTZDMi4wMjY4MSAyMS40OTA3IDEuMzcxMDggMjEuNTIwNSAwLjc0NTE1MyAyMS41MjA1QzAuMDI5ODA2MSAyMS41MjA1IDAgMjEuOTM3OCAwIDIyLjQ3NDNDMCAyMy4wNzA0IDAuMzI3ODY3IDIzLjEwMDIgMC43NzQ5NTkgMjMuMTAwMkwxOS40OTMyIDIzLjA3MDRDMTkuOTQwMyAyMy4wNzA0IDIwLjE0ODkgMjIuOTUxMiAyMC4xNDg5IDIyLjQ0NDVDMjAuMTQ4OSAyMC4zODc5IDIwLjE3ODcgMTguMzMxMiAyMC4xNzg3IDE2LjI3NDZDMjAuMjA4NSAxNi4wMzYyIDIwLjIwODUgMTUuNzY3OSAyMC4xMTkxIDE1LjU4OTFaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K" alt="Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>
