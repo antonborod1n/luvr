@@ -4,6 +4,10 @@ body {
     position: relative;
 }
 
+.slider__item-box {
+    position: relative;
+}
+
 body {
     @extend %montserrat-400;
     font-size: 16px;

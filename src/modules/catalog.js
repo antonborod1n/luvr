@@ -1,24 +1,27 @@
 //filter
-const filter = document.querySelector('.filter__inner');
+const filterMain = document.querySelector('.filter');
+const filterInner = document.querySelector('.filter__inner');
 const filterOpen = document.querySelector('.catalog__filter-btn');
-const filterReset = document.querySelector('.catalog__filter-btn-reset');
 const filterBtnBox = document.querySelector('.filter__btn-box');
-/* const menuOverlay = document.querySelector(".overlay"); */
+const filterReset = document.querySelector('.catalog__filter-btn-box');
+const menuOverlay = document.querySelector(".overlay");
 
-filterOpen.addEventListener('click', function (e) {
-    e.preventDefault();
+filterOpen.addEventListener("click", toggleFilter);
+menuOverlay.addEventListener("click", toggleFilter);
 
-    filter.classList.toggle('active');
-    /* menuOverlay.classList.toggle("active"); */
+function toggleFilter() {
+    filterInner.classList.toggle('active');
+    menuOverlay.classList.toggle("active");
 
-    if (filter.classList.contains('active')) {
-        filterReset.classList.add('active');
-        /* menuOverlay.classList.add("active"); */
+    if (filterInner.classList.contains('active')) {
+        filterMain.classList.add('active');
         filterBtnBox.classList.add('active');
+        filterReset.classList.add('active');
     } else {
+        filterMain.classList.remove('active');
         filterReset.classList.remove('active');
-        /*  menuOverlay.classList.remove("active"); */
         filterBtnBox.classList.remove('active');
+        menuOverlay.classList.remove("active");
     }
-});
+}
 

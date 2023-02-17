@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <%= require('html-loader!./templates/header.html').default %>
+    <%= require('html-loader!./templates/block-header.html').default %>
         <%= require('html-loader!./templates/block-slider.html').default %>
             <main class="main">
                 <%= require('html-loader!./templates/block-top.html').default %>
@@ -17,7 +17,7 @@
                         <%= require('html-loader!./templates/block-stock.html').default %>
                             <%= require('html-loader!./templates/block-hit.html').default %>
             </main>
-            <%= require('html-loader!./templates/footer.html').default %>
+            <%= require('html-loader!./templates/block-footer.html').default %>
 </body>
 
 </html>

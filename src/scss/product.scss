@@ -46,6 +46,7 @@
     justify-content: space-between;
     align-items: center;
     width: 94%;
+    height: 40px;
     margin: 8px;
 }
 
@@ -60,6 +61,12 @@
     height: 24px;
     background: #FF6666;
     color: #FFFFFF;
+
+}
+
+.product__favor-link {
+    width: 100%;
+    text-align: right;
 }
 
 .product__title {

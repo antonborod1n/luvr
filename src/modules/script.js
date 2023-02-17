@@ -9,13 +9,19 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         breakpoints: {
-            // when window width is >= 320px
-            320: {
+            290: {
                 slidesPerView: 1,
                 spaceBetween: 24
             },
-            // when window width is >= 640px
             640: {
+                slidesPerView: 1.5,
+                spaceBetween: 24
+            },
+            800: {
+                slidesPerView: 2,
+                spaceBetween: 24
+            },
+            900: {
                 slidesPerView: 2.5,
                 spaceBetween: 24
             },
@@ -29,12 +35,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
 
         breakpoints: {
-            // when window width is >= 320px
             320: {
                 slidesPerView: 1,
                 spaceBetween: 10
             },
-            // when window width is >= 640px
             640: {
                 slidesPerView: 2,
                 spaceBetween: 24
@@ -47,29 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    /*     const newProduct = new Swiper('.swiper-new', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-    
-            breakpoints: {
-                // when window width is >= 320px
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10
-                },
-                // when window width is >= 640px
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 24
-                },
-                940: {
-                    slidesPerView: 4,
-                    spaceBetween: 24
-                }
-            }
-        }); */
 
     const slider = document.querySelector('.slider-main');
     const sliderNav = document.querySelector('.slider-nav');
@@ -82,14 +63,6 @@ document.addEventListener('DOMContentLoaded', function () {
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         direction: 'vertical',
-        /* breakpoints: {
-            295: {
-                direction: 'horizontal',
-            },
-            640: {
-                direction: 'vertical',
-            },
-        } */
     })
 
     let mySwiper = new Swiper(slider, {
@@ -113,11 +86,13 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    let favorLinks = document.querySelectorAll('.favor-link');
 
     /* color hearts */
+    let favorLinks = document.querySelectorAll('.favor-link');
+
     favorLinks.forEach(item => {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
             item.classList.toggle('active');
         })
     })
@@ -142,19 +117,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //header
     let headerBottom = document.querySelector('.header__bottom');
-    let header = document.querySelector('.header');
-
-    /* header.addEventListener('mouseover', function () {
-        menu.classList.toggle('menu--hidden');
-        headerBottom.classList.toggle('header__bottom--hidden');
-    }); */
 
     window.addEventListener('scroll', function () {
         if (window.scrollY > 1) {
             menu.classList.add('menu--hidden');
             headerBottom.classList.add('header__bottom--hidden');
         } else if (window.scrollY < 10 || window.innerWidth <= mediaSize) {
-            console.log(window.scrollY)
             menu.classList.remove('menu--hidden');
             headerBottom.classList.remove('header__bottom--hidden');
         }
@@ -173,7 +141,5 @@ document.addEventListener('DOMContentLoaded', function () {
         menuOverlay.classList.toggle("active");
         document.body.classList.toggle("hidden-scrolling");
     }
-
-
 });
 

@@ -485,6 +485,11 @@
     max-width: 744px;
 }
 
+.account__notifications-conternt {
+    height: 440px;
+    overflow-x: auto;
+}
+
 .account__notifications-title {
     @extend %montserrat-500;
     font-size: 32px;
@@ -647,6 +652,8 @@
 }
 
 .cart__product {
+    height: 488px;
+    overflow-x: auto;
     width: 1000px;
 }
 
@@ -665,6 +672,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 24px;
+
 }
 
 .product-min__box {
@@ -887,7 +895,6 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: right;
-    position: relative;
 }
 
 .shopping__title-link,
@@ -955,6 +962,7 @@
     right: 13px;
     padding: 16px 25px;
     position: absolute;
+    z-index: 10;
     width: 232px;
     height: 120px;
     background: #FFFFFF;
