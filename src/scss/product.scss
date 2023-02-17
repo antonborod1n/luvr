@@ -9,92 +9,84 @@
 @import 'global';
 /* Глобальные стили */
 
-.product {}
+.product {
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 24px;
+        grid-row-gap: 40px;
+    }
 
-.product__inner {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 24px;
-    grid-row-gap: 40px;
-}
+    &__item {
+        &-box {
+            position: relative;
+            margin-bottom: 24px;
+        }
 
-/* .product__item {
-    max-width: 360px;
-    margin-right: 24px;
-} */
+        &-img {
+            height: 100%;
+            object-fit: cover;
+        }
 
-/* .product__item-slider {
-    margin-right: 24px;
-} */
+        &-row {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 94%;
+            height: 40px;
+            margin: 8px;
+        }
+    }
 
-.product__item-box {
-    position: relative;
-    margin-bottom: 24px;
-}
+    &__new,
+    &__sale {
+        @extend %montserrat-700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px;
+        width: 40px;
+        height: 24px;
+        background: #FF6666;
+        color: #FFFFFF;
+    }
 
-.product__item-img {
-    height: 100%;
-    object-fit: cover;
-}
+    &__favor-link {
+        width: 100%;
+        text-align: right;
+    }
 
-.product__item-row {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 94%;
-    height: 40px;
-    margin: 8px;
-}
+    &__title {
+        margin-bottom: 8px;
 
-.product__new,
-.product__sale {
-    @extend %montserrat-700;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    width: 40px;
-    height: 24px;
-    background: #FF6666;
-    color: #FFFFFF;
+        &-link {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+    }
 
-}
+    &__price-new {
+        @extend %montserrat-500;
+        display: inline-block;
+        font-size: 24px;
+        line-height: 32px;
+    }
 
-.product__favor-link {
-    width: 100%;
-    text-align: right;
-}
-
-.product__title {
-    margin-bottom: 8px;
-}
-
-.product__title-link {
-    font-size: 24px;
-    line-height: 32px;
-    margin-bottom: 8px;
-    color: #000000;
-}
-
-.product__price-new {
-    @extend %montserrat-500;
-    display: inline-block;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-.product__price-old {
-    @extend %montserrat-500;
-    display: inline-block;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    opacity: 0.5;
-    margin-left: 8px;
+    &__price-old {
+        @extend %montserrat-500;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        opacity: 0.5;
+        margin-left: 8px;
+    }
 }
 
 /* МЕДИА-ЗАПРОСЫ */
