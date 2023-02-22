@@ -598,7 +598,6 @@
 }
 
 .service__list-item {
-    @extend %os-400;
     position: relative;
     margin-bottom: 10px;
     text-indent: 10px;
@@ -613,6 +612,14 @@
 
 .service__text {
     margin-bottom: 10px;
+}
+
+.cov::after {
+    content: '\00AB';
+}
+
+.cos:before {
+    content: '\0022';
 }
 
 //end service----------------------
