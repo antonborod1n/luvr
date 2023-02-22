@@ -27,13 +27,3 @@
         url('../fonts/Montserrat-Bold.woff') format('woff');
     font-display: swap;
 }
-
-@font-face {
-    font-family: 'OpenSans-Regular';
-    font-style: normal;
-    font-weight: 400;
-    src: local('OpenSans-Regular'),
-        url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-        url('../fonts/OpenSans-Regular.woff') format('woff');
-    font-display: swap;
-}
