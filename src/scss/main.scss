@@ -614,16 +614,12 @@
     margin-bottom: 10px;
 }
 
-.cos:after {
+.cos:after,
+.cos:before {
     content: '\0022';
 }
 
-.cos:before {
-    content: '\00AB';
-}
-
 //end service----------------------
-
 
 //FAVORITE
 
