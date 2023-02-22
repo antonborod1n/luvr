@@ -598,6 +598,7 @@
 }
 
 .service__list-item {
+    @extend %os-400;
     position: relative;
     margin-bottom: 10px;
     text-indent: 10px;
