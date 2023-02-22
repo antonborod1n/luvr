@@ -628,6 +628,14 @@
 
 //FAVORITE
 
+.favorites__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 24px;
+    grid-row-gap: 40px;
+}
+
 .favorites__title {
     @extend %montserrat-500;
     font-size: 48px;
@@ -644,6 +652,10 @@
     background: #FF6666;
     color: #FFFFFF;
 }
+
+/* .favorites__product-item {
+    max-width: 200px
+} */
 
 //CART
 
