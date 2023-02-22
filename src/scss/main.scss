@@ -614,12 +614,12 @@
     margin-bottom: 10px;
 }
 
-.cov::after {
-    content: '\00AB';
+.cos::after {
+    content: '\0022';
 }
 
 .cos:before {
-    content: '\0022';
+    content: '\00AB';
 }
 
 //end service----------------------
