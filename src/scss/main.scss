@@ -143,7 +143,6 @@
 }
 
 .stock__slider-top {
-    max-width: 616px;
     height: 360px;
     background: #000000;
     opacity: 0.1;
@@ -547,6 +546,9 @@
 
 .contact__address {
     font-style: normal;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 //end contact----------------------
@@ -606,8 +608,9 @@
 .dots-list::before {
     content: '.';
     position: absolute;
-    top: -4px;
-    left: -7px;
+    font-size: 35px;
+    top: -11px;
+    left: -11px;
 }
 
 .service__text {
@@ -753,7 +756,8 @@
     width: 32px;
     height: 32px;
     border-bottom: 1px solid #000000;
-    background-color: transparent;
+    background-color: #FFFFFF;
+    border-radius: 0px;
 
     &:hover {
         transition: all .3s;
