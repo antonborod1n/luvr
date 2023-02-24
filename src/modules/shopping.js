@@ -1,13 +1,20 @@
-let shoppingMoreBtn = document.querySelector('.shopping__link-more');
-let shoppinDrop = document.querySelector('.shopping__drop-box');
+document.addEventListener('DOMContentLoaded', function () {
+    //menu
+    let shoppingInner = document.querySelector('.shopping__inner');
+    let shoppingPopups = document.querySelectorAll('.shopping__popup');
 
-shoppingMoreBtn.addEventListener('click', function () {
-    shoppinDrop.classList.toggle('active');
-});
+    shoppingInner.addEventListener('click', function (e) {
+        let event = e.target;
 
-let shoppinAddBtn = document.querySelector('.shopping__btn-info');
-let shoppinPopup = document.querySelector('.shopping__popup');
+        shoppingPopups.forEach(item => {
+            item.classList.remove('active')
+        });
 
-shoppinAddBtn.addEventListener('click', function () {
-    shoppinPopup.classList.toggle('active');
-});
+        if (event.classList.contains('shopping__btn-info')) {
+            let parent = event.closest('.shopping__item');
+            parent.querySelector('.shopping__popup').classList.add('active');
+        }
+    })
+})
+
+

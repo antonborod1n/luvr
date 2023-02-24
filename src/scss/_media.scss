@@ -701,8 +701,7 @@
 
     .product__new,
     .product__sale {
-        width: 30px;
-        height: 10px;
+        padding: 4px;
     }
 
     .title__new,
@@ -710,10 +709,6 @@
     .title__hit {
         font-size: 28px;
         line-height: 48px;
-    }
-
-    .shopping__item {
-        position: relative;
     }
 
     .shopping__btn-info {

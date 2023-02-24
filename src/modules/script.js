@@ -2,6 +2,10 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/pagination';
 
 document.addEventListener('DOMContentLoaded', function () {
+    //swiper slider
+    const slider = document.querySelector('.slider-main');
+    const sliderNav = document.querySelector('.slider-nav');
+
     const swiper = new Swiper('.swiper-stock', {
         navigation: {
             nextEl: '.swiper-button-next',
@@ -45,9 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const slider = document.querySelector('.slider-main');
-    const sliderNav = document.querySelector('.slider-nav');
-
     let mySwiperNav = new Swiper(sliderNav, {
         slidesPerView: 5,
         spaceBetween: 10,
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             delay: 3000,
         },
     });
-
+    //-----
 
     /* color hearts */
     let favorLinks = document.querySelectorAll('.favor-link');

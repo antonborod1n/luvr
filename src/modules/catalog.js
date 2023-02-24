@@ -9,7 +9,8 @@ const menuOverlay = document.querySelector(".overlay");
 filterOpen.addEventListener("click", toggleFilter);
 menuOverlay.addEventListener("click", toggleFilter);
 
-function toggleFilter() {
+function toggleFilter(a) {
+    console.log(a.target);
     filterInner.classList.toggle('active');
     menuOverlay.classList.toggle("active");
 
@@ -21,7 +22,6 @@ function toggleFilter() {
         filterMain.classList.remove('active');
         filterReset.classList.remove('active');
         filterBtnBox.classList.remove('active');
-        menuOverlay.classList.remove("active");
     }
 }
 
