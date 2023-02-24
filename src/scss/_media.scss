@@ -693,10 +693,15 @@
 }
 
 @media (max-width: 504px) {
+    .product__price-old {
+        font-size: 15px;
+        line-height: 20px;
+        margin-left: 0px;
+    }
 
     .product__new,
     .product__sale {
-        width: 35px;
+        width: 30px;
         height: 10px;
     }
 
