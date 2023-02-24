@@ -693,6 +693,20 @@
 }
 
 @media (max-width: 504px) {
+
+    .product__new,
+    .product__sale {
+        width: 35px;
+        height: 10px;
+    }
+
+    .title__new,
+    .title__stock,
+    .title__hit {
+        font-size: 28px;
+        line-height: 48px;
+    }
+
     .shopping__item {
         position: relative;
     }
