@@ -1,20 +1,27 @@
 document.addEventListener('DOMContentLoaded', function () {
     //menu
-    let shoppingInner = document.querySelector('.shopping__inner');
+    let shopping = document.querySelector('.shopping');
     let shoppingPopups = document.querySelectorAll('.shopping__popup');
 
-    shoppingInner.addEventListener('click', function (e) {
-        let event = e.target;
+    function delegete(box, eventname, selector, btn) {
+        box.addEventListener(eventname, function (e) {
+            let event = e.target;
 
-        shoppingPopups.forEach(item => {
-            item.classList.remove('active')
-        });
+            shoppingPopups.forEach(item => {
+                item.classList.remove('active')
+            });
 
-        if (event.classList.contains('shopping__btn-info')) {
-            let parent = event.closest('.shopping__item');
-            parent.querySelector('.shopping__popup').classList.add('active');
-        }
-    })
+            if (event.classList.contains(btn)) {
+                let parent = event.closest(selector);
+                console.log(parent)
+                if (parent != null && box.contains(parent)) {
+                    parent.querySelector('.shopping__popup').classList.add('active');
+                }
+            }
+        })
+    }
+
+    delegete(shopping, 'click', '.shopping__item', 'shopping__btn-info');
 })
 
 
